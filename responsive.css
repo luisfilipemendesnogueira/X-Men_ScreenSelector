@@ -69,12 +69,10 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 200%;
-        height: 112%;
+        width: 50%;
+        height: 50%;
         background-size: cover;
-        overflow: hidden;
     }
-
 
     .main .fighter_bg {
         background: url('./images/camada_191.png') 50% / cover no-repeat;
