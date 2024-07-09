@@ -65,7 +65,7 @@
     }
 
     .main .bg {
-        background: url('./assets/images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
+        background: url('./images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
         position: absolute;
         left: 0;
         top: 0;
@@ -77,7 +77,7 @@
 
 
     .main .fighter_bg {
-        background: url('./assets/images/camada_191.png') 50% / cover no-repeat;
+        background: url('./images/camada_191.png') 50% / cover no-repeat;
         position: relative;
         margin-bottom: 11px;
         /* 22px / 2 */
@@ -88,7 +88,7 @@
     }
 
     .main .fighter_pic {
-        background: url('./assets/images/image_45.png') 50% / cover no-repeat;
+        background: url('./images/image_45.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.25px;
         /* 10.5px / 2 */
@@ -101,7 +101,7 @@
     }
 
     .main .villain_pic {
-        background: url('./assets/images/camada_201.png') 50% / cover no-repeat;
+        background: url('./images/camada_201.png') 50% / cover no-repeat;
         position: relative;
         margin-bottom: 11px;
         /* 22px / 2 */
@@ -123,7 +123,7 @@
     }
 
     .main .fighter_order {
-        background: url('./assets/images/camada_22_copiar_1.png') 50% / cover no-repeat;
+        background: url('./images/camada_22_copiar_1.png') 50% / cover no-repeat;
         margin: 0 0.75px 165px 0.25px;
         /* 1.5px / 2 */
         width: 17px;
@@ -133,7 +133,7 @@
     }
 
     .main .villains_order {
-        background: url('./assets/images/camada_221.png') 50% / cover no-repeat;
+        background: url('./images/camada_221.png') 50% / cover no-repeat;
         width: 18px;
         /* 36px / 2 */
         height: 51px;
@@ -256,7 +256,7 @@
     .main .cyclops {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_2.png') 50% / cover no-repeat;
+        background: url('./images/image_2.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -271,7 +271,7 @@
     .main .emma {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_3.png') 50% / cover no-repeat;
+        background: url('./images/image_3.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.75px;
         /* 11.5px / 2 */
@@ -286,7 +286,7 @@
     .main .jean {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/jean.png') 50% / cover no-repeat;
+        background: url('./images/jean.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.75px;
         /* 83.5px / 2 */
@@ -301,7 +301,7 @@
     .main .kitty {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/kitty.png') 50% / cover no-repeat;
+        background: url('./images/kitty.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -316,7 +316,7 @@
     .main .colossus {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/colossus.png') 50% / cover no-repeat;
+        background: url('./images/colossus.png') 50% / cover no-repeat;
         position: absolute;
         left: 41.5px;
         /* 83px / 2 */
@@ -331,7 +331,7 @@
     .main .jubilee {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/jubilee.png') 50% / cover no-repeat;
+        background: url('./images/jubilee.png') 50% / cover no-repeat;
         position: absolute;
         left: 80.25px;
         /* 160.5px / 2 */
@@ -346,7 +346,7 @@
     .main .wolverine {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_5.png') 50% / cover no-repeat;
+        background: url('./images/image_5.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.5px;
         /* 11px / 2 */
@@ -361,7 +361,7 @@
     .main .x23 {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_11.png') 50% / cover no-repeat;
+        background: url('./images/image_11.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.5px;
         /* 11px / 2 */
@@ -376,7 +376,7 @@
     .main .daken {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_10.png') 50% / cover no-repeat;
+        background: url('./images/image_10.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -391,7 +391,7 @@
     .main .nightcrawler {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_12.png') 50% / cover no-repeat;
+        background: url('./images/image_12.png') 50% / cover no-repeat;
         position: absolute;
         top: 4px;
         /* 8px / 2 */
@@ -406,7 +406,7 @@
     .main .storm {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_14.png') 50% / cover no-repeat;
+        background: url('./images/image_14.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.5px;
         /* 11px / 2 */
@@ -421,7 +421,7 @@
     .main .psylocke {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_13.png') 50% / cover no-repeat;
+        background: url('./images/image_13.png') 50% / cover no-repeat;
         position: absolute;
         top: 3.5px;
         /* 7px / 2 */
@@ -436,7 +436,7 @@
     .main .angel {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_32.png') 50% / cover no-repeat;
+        background: url('./images/image_32.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -451,7 +451,7 @@
     .main .iceman {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_34.png') 50% / cover no-repeat;
+        background: url('./images/image_34.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.5px;
         /* 83px / 2 */
@@ -466,7 +466,7 @@
     .main .beast {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_33.png') 50% / cover no-repeat;
+        background: url('./images/image_33.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -481,7 +481,7 @@
     .main .rogue {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_35.png') 50% / cover no-repeat;
+        background: url('./images/image_35.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -496,7 +496,7 @@
     .main .gambit {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_37.png') 50% / cover no-repeat;
+        background: url('./images/image_37.png') 50% / cover no-repeat;
         position: absolute;
         left: 42px;
         /* 84px / 2 */
@@ -511,7 +511,7 @@
     .main .bishop {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_36.png') 50% / cover no-repeat;
+        background: url('./images/image_36.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -524,7 +524,7 @@
     }
 
     .main .timer {
-        background: url('./assets/images/camada_231.png') 50% / cover no-repeat;
+        background: url('./images/camada_231.png') 50% / cover no-repeat;
         width: 111px;
         /* 222px / 2 */
         height: 41px;
@@ -534,7 +534,7 @@
     .main .archangel {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_38.png') 50% / cover no-repeat;
+        background: url('./images/image_38.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -549,7 +549,7 @@
     .main .phoenix_cyclops {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_40.png') 50% / cover no-repeat;
+        background: url('./images/image_40.png') 50% / cover no-repeat;
         position: absolute;
         left: 39.75px;
         /* 79.5px / 2 */
@@ -564,7 +564,7 @@
     .main .phoenix {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_41.png') 50% / cover no-repeat;
+        background: url('./images/image_41.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -579,7 +579,7 @@
     .main .cable {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_15.png') 50% / cover no-repeat;
+        background: url('./images/image_15.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -594,7 +594,7 @@
     .main .deadpool {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_17.png') 50% / cover no-repeat;
+        background: url('./images/image_17.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.75px;
         /* 83.5px / 2 */
@@ -609,7 +609,7 @@
     .main .domino {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_16.png') 50% / cover no-repeat;
+        background: url('./images/image_16.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -624,7 +624,7 @@
     .main .magik {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_18.png') 50% / cover no-repeat;
+        background: url('./images/image_18.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -639,7 +639,7 @@
     .main .sunspot {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_20.png') 50% / cover no-repeat;
+        background: url('./images/image_20.png') 50% / cover no-repeat;
         position: absolute;
         left: 42px;
         /* 84px / 2 */
@@ -654,7 +654,7 @@
     .main .magma {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_19.png') 50% / cover no-repeat;
+        background: url('./images/image_19.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -669,7 +669,7 @@
     .main .xavier {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
+        background: url('./images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
         position: absolute;
         top: 9px;
         /* 18px / 2 */
@@ -684,7 +684,7 @@
     .main .magneto {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_23.png') 50% / cover no-repeat;
+        background: url('./images/image_23.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.75px;
         /* 11.5px / 2 */
@@ -699,7 +699,7 @@
     .main .banshee {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_22.png') 50% / cover no-repeat;
+        background: url('./images/image_22.png') 50% / cover no-repeat;
         position: absolute;
         top: 1.75px;
         /* 3.5px / 2 */
@@ -714,7 +714,7 @@
     .main .havok {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_24.png') 50% / cover no-repeat;
+        background: url('./images/image_24.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -729,7 +729,7 @@
     .main .polaris {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_26.png') 50% / cover no-repeat;
+        background: url('./images/image_26.png') 50% / cover no-repeat;
         position: absolute;
         left: 41.25px;
         /* 82.5px / 2 */
@@ -744,7 +744,7 @@
     .main .juggernaut {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_25.png') 50% / cover no-repeat;
+        background: url('./images/image_25.png') 50% / cover no-repeat;
         position: absolute;
         top: 7.75px;
         /* 15.5px / 2 */
@@ -759,7 +759,7 @@
     .main .scarletwitch {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_27.png') 50% / cover no-repeat;
+        background: url('./images/image_27.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -774,7 +774,7 @@
     .main .quicksilver {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_29.png') 50% / cover no-repeat;
+        background: url('./images/image_29.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.75px;
         /* 83.5px / 2 */
@@ -789,7 +789,7 @@
     .main .mystique {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/Image.png') 50% / cover no-repeat;
+        background: url('./images/Image.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -804,7 +804,7 @@
     .main .rachel {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_42.png') 50% / cover no-repeat;
+        background: url('./images/image_42.png') 50% / cover no-repeat;
         position: absolute;
         width: 37px;
         /* 74px / 2 */
@@ -815,7 +815,7 @@
     .main .madelyne {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_31.png') 50% / cover no-repeat;
+        background: url('./images/image_31.png') 50% / cover no-repeat;
         position: absolute;
         left: 41.5px;
         /* 83px / 2 */
@@ -830,7 +830,7 @@
     .main .hope {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_30.png') 50% / cover no-repeat;
+        background: url('./images/image_30.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -1121,7 +1121,7 @@
     }
 
     .main .fighter_board {
-        background: url('./assets/images/camada_212.png') 50% / cover no-repeat;
+        background: url('./images/camada_212.png') 50% / cover no-repeat;
         position: absolute;
         left: 189px;
         /* 378px / 2 */
@@ -1134,7 +1134,7 @@
     }
 
     .main .villain_board {
-        background: url('./assets/images/camada_212.png') 50% / cover no-repeat;
+        background: url('./images/camada_212.png') 50% / cover no-repeat;
         position: absolute;
         left: 189px;
         /* 378px / 2 */
@@ -1223,7 +1223,7 @@
     }
 
     .main .bg {
-        background: url('./assets/images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
+        background: url('./images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
         position: absolute;
         left: 0;
         top: 0;
@@ -1235,7 +1235,7 @@
 
 
     .main .fighter_bg {
-        background: url('./assets/images/camada_191.png') 50% / cover no-repeat;
+        background: url('./images/camada_191.png') 50% / cover no-repeat;
         position: relative;
         margin-bottom: 11px;
         /* 22px / 2 */
@@ -1246,7 +1246,7 @@
     }
 
     .main .fighter_pic {
-        background: url('./assets/images/image_45.png') 50% / cover no-repeat;
+        background: url('./images/image_45.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.25px;
         /* 10.5px / 2 */
@@ -1259,7 +1259,7 @@
     }
 
     .main .villain_pic {
-        background: url('./assets/images/camada_201.png') 50% / cover no-repeat;
+        background: url('./images/camada_201.png') 50% / cover no-repeat;
         position: relative;
         margin-bottom: 11px;
         /* 22px / 2 */
@@ -1281,7 +1281,7 @@
     }
 
     .main .fighter_order {
-        background: url('./assets/images/camada_22_copiar_1.png') 50% / cover no-repeat;
+        background: url('./images/camada_22_copiar_1.png') 50% / cover no-repeat;
         margin: 0 0.75px 165px 0.25px;
         /* 1.5px / 2 */
         width: 17px;
@@ -1291,7 +1291,7 @@
     }
 
     .main .villains_order {
-        background: url('./assets/images/camada_221.png') 50% / cover no-repeat;
+        background: url('./images/camada_221.png') 50% / cover no-repeat;
         width: 18px;
         /* 36px / 2 */
         height: 51px;
@@ -1414,7 +1414,7 @@
     .main .cyclops {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_2.png') 50% / cover no-repeat;
+        background: url('./images/image_2.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -1429,7 +1429,7 @@
     .main .emma {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_3.png') 50% / cover no-repeat;
+        background: url('./images/image_3.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.75px;
         /* 11.5px / 2 */
@@ -1444,7 +1444,7 @@
     .main .jean {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/jean.png') 50% / cover no-repeat;
+        background: url('./images/jean.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.75px;
         /* 83.5px / 2 */
@@ -1459,7 +1459,7 @@
     .main .kitty {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/kitty.png') 50% / cover no-repeat;
+        background: url('./images/kitty.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -1474,7 +1474,7 @@
     .main .colossus {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/colossus.png') 50% / cover no-repeat;
+        background: url('./images/colossus.png') 50% / cover no-repeat;
         position: absolute;
         left: 41.5px;
         /* 83px / 2 */
@@ -1489,7 +1489,7 @@
     .main .jubilee {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/jubilee.png') 50% / cover no-repeat;
+        background: url('./images/jubilee.png') 50% / cover no-repeat;
         position: absolute;
         left: 80.25px;
         /* 160.5px / 2 */
@@ -1504,7 +1504,7 @@
     .main .wolverine {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_5.png') 50% / cover no-repeat;
+        background: url('./images/image_5.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.5px;
         /* 11px / 2 */
@@ -1519,7 +1519,7 @@
     .main .x23 {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_11.png') 50% / cover no-repeat;
+        background: url('./images/image_11.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.5px;
         /* 11px / 2 */
@@ -1534,7 +1534,7 @@
     .main .daken {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_10.png') 50% / cover no-repeat;
+        background: url('./images/image_10.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -1549,7 +1549,7 @@
     .main .nightcrawler {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_12.png') 50% / cover no-repeat;
+        background: url('./images/image_12.png') 50% / cover no-repeat;
         position: absolute;
         top: 4px;
         /* 8px / 2 */
@@ -1564,7 +1564,7 @@
     .main .storm {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_14.png') 50% / cover no-repeat;
+        background: url('./images/image_14.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.5px;
         /* 11px / 2 */
@@ -1579,7 +1579,7 @@
     .main .psylocke {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_13.png') 50% / cover no-repeat;
+        background: url('./images/image_13.png') 50% / cover no-repeat;
         position: absolute;
         top: 3.5px;
         /* 7px / 2 */
@@ -1594,7 +1594,7 @@
     .main .angel {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_32.png') 50% / cover no-repeat;
+        background: url('./images/image_32.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -1609,7 +1609,7 @@
     .main .iceman {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_34.png') 50% / cover no-repeat;
+        background: url('./images/image_34.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.5px;
         /* 83px / 2 */
@@ -1624,7 +1624,7 @@
     .main .beast {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_33.png') 50% / cover no-repeat;
+        background: url('./images/image_33.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -1639,7 +1639,7 @@
     .main .rogue {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_35.png') 50% / cover no-repeat;
+        background: url('./images/image_35.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -1654,7 +1654,7 @@
     .main .gambit {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_37.png') 50% / cover no-repeat;
+        background: url('./images/image_37.png') 50% / cover no-repeat;
         position: absolute;
         left: 42px;
         /* 84px / 2 */
@@ -1669,7 +1669,7 @@
     .main .bishop {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_36.png') 50% / cover no-repeat;
+        background: url('./images/image_36.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -1682,7 +1682,7 @@
     }
 
     .main .timer {
-        background: url('./assets/images/camada_231.png') 50% / cover no-repeat;
+        background: url('./images/camada_231.png') 50% / cover no-repeat;
         width: 111px;
         /* 222px / 2 */
         height: 41px;
@@ -1692,7 +1692,7 @@
     .main .archangel {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_38.png') 50% / cover no-repeat;
+        background: url('./images/image_38.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -1707,7 +1707,7 @@
     .main .phoenix_cyclops {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_40.png') 50% / cover no-repeat;
+        background: url('./images/image_40.png') 50% / cover no-repeat;
         position: absolute;
         left: 39.75px;
         /* 79.5px / 2 */
@@ -1722,7 +1722,7 @@
     .main .phoenix {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_41.png') 50% / cover no-repeat;
+        background: url('./images/image_41.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -1737,7 +1737,7 @@
     .main .cable {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_15.png') 50% / cover no-repeat;
+        background: url('./images/image_15.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -1752,7 +1752,7 @@
     .main .deadpool {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_17.png') 50% / cover no-repeat;
+        background: url('./images/image_17.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.75px;
         /* 83.5px / 2 */
@@ -1767,7 +1767,7 @@
     .main .domino {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_16.png') 50% / cover no-repeat;
+        background: url('./images/image_16.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -1782,7 +1782,7 @@
     .main .magik {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_18.png') 50% / cover no-repeat;
+        background: url('./images/image_18.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -1797,7 +1797,7 @@
     .main .sunspot {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_20.png') 50% / cover no-repeat;
+        background: url('./images/image_20.png') 50% / cover no-repeat;
         position: absolute;
         left: 42px;
         /* 84px / 2 */
@@ -1812,7 +1812,7 @@
     .main .magma {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_19.png') 50% / cover no-repeat;
+        background: url('./images/image_19.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -1827,7 +1827,7 @@
     .main .xavier {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
+        background: url('./images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
         position: absolute;
         top: 9px;
         /* 18px / 2 */
@@ -1842,7 +1842,7 @@
     .main .magneto {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_23.png') 50% / cover no-repeat;
+        background: url('./images/image_23.png') 50% / cover no-repeat;
         position: absolute;
         top: 5.75px;
         /* 11.5px / 2 */
@@ -1857,7 +1857,7 @@
     .main .banshee {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_22.png') 50% / cover no-repeat;
+        background: url('./images/image_22.png') 50% / cover no-repeat;
         position: absolute;
         top: 1.75px;
         /* 3.5px / 2 */
@@ -1872,7 +1872,7 @@
     .main .havok {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_24.png') 50% / cover no-repeat;
+        background: url('./images/image_24.png') 50% / cover no-repeat;
         position: absolute;
         left: 3.25px;
         /* 6.5px / 2 */
@@ -1887,7 +1887,7 @@
     .main .polaris {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_26.png') 50% / cover no-repeat;
+        background: url('./images/image_26.png') 50% / cover no-repeat;
         position: absolute;
         left: 41.25px;
         /* 82.5px / 2 */
@@ -1902,7 +1902,7 @@
     .main .juggernaut {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_25.png') 50% / cover no-repeat;
+        background: url('./images/image_25.png') 50% / cover no-repeat;
         position: absolute;
         top: 7.75px;
         /* 15.5px / 2 */
@@ -1917,7 +1917,7 @@
     .main .scarletwitch {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_27.png') 50% / cover no-repeat;
+        background: url('./images/image_27.png') 50% / cover no-repeat;
         position: absolute;
         left: 5.75px;
         /* 11.5px / 2 */
@@ -1932,7 +1932,7 @@
     .main .quicksilver {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_29.png') 50% / cover no-repeat;
+        background: url('./images/image_29.png') 50% / cover no-repeat;
         position: absolute;
         right: 41.75px;
         /* 83.5px / 2 */
@@ -1947,7 +1947,7 @@
     .main .mystique {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/Image.png') 50% / cover no-repeat;
+        background: url('./images/Image.png') 50% / cover no-repeat;
         position: absolute;
         right: 3.25px;
         /* 6.5px / 2 */
@@ -1962,7 +1962,7 @@
     .main .rachel {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_42.png') 50% / cover no-repeat;
+        background: url('./images/image_42.png') 50% / cover no-repeat;
         position: absolute;
         width: 37px;
         /* 74px / 2 */
@@ -1973,7 +1973,7 @@
     .main .madelyne {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_31.png') 50% / cover no-repeat;
+        background: url('./images/image_31.png') 50% / cover no-repeat;
         position: absolute;
         left: 41.5px;
         /* 83px / 2 */
@@ -1988,7 +1988,7 @@
     .main .hope {
         border-radius: 7.5px;
         /* 15px / 2 */
-        background: url('./assets/images/image_30.png') 50% / cover no-repeat;
+        background: url('./images/image_30.png') 50% / cover no-repeat;
         position: absolute;
         right: 5.75px;
         /* 11.5px / 2 */
@@ -2279,7 +2279,7 @@
     }
 
     .main .fighter_board {
-        background: url('./assets/images/camada_212.png') 50% / cover no-repeat;
+        background: url('./images/camada_212.png') 50% / cover no-repeat;
         position: absolute;
         left: 189px;
         /* 378px / 2 */
@@ -2292,7 +2292,7 @@
     }
 
     .main .villain_board {
-        background: url('./assets/images/camada_212.png') 50% / cover no-repeat;
+        background: url('./images/camada_212.png') 50% / cover no-repeat;
         position: absolute;
         left: 189px;
         /* 378px / 2 */
