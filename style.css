@@ -1,19 +1,58 @@
 @font-face {
-font-family: 'kof';
-src: url('./assets/font/the-king-of-fighters-2002.ttf') format('truetype'), url('./assets/font/the-king-of-fighters-2002.otf') format('opentype');
-font-weight: normal;
-font-style: normal;
+    font-family: 'kof';
+    src: url('./assets/font/the-king-of-fighters-2002.ttf') format('truetype'), url('./assets/font/the-king-of-fighters-2002.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
 }
 
-.main .rectangle-16,.main .rectangle-17,.main .rectangle-18,.main .rectangle-19,.main .rectangle-20,.main .rectangle-21,.main .rectangle-22,.main .rectangle-23,.main .rectangle-24,.main .rectangle-25,.main .rectangle-26,.main .rectangle-27,.main .rectangle-28,.main .rectangle-29,.main .rectangle-30,.main .rectangle-31,.main .rectangle-32,.main .rectangle-33,.main .rectangle-34,.main .rectangle-35,.main .rectangle-36,.main .rectangle-37,.main .rectangle-38,.main .rectangle-39,.main .rectangle-40,.main .rectangle-41,.main .rectangle-42,.main .rectangle-43,.main .rectangle-44,.main .rectangle-45,.main .rectangle-46,.main .rectangle-47,.main .rectangle-48,.main .rectangle-49,.main .rectangle-50,.main .rectangle-51,.main .rectangle-52,.main .rectangle-53,.main .rectangle-54 {
-border-radius: 10px;
-background: radial-gradient(50% 50% at 50% 50%, #9A830C 0%, #D6D92E 100%);
-width: 74px;
-height: 83px;
+.main .rectangle-16,
+.main .rectangle-17,
+.main .rectangle-18,
+.main .rectangle-19,
+.main .rectangle-20,
+.main .rectangle-21,
+.main .rectangle-22,
+.main .rectangle-23,
+.main .rectangle-24,
+.main .rectangle-25,
+.main .rectangle-26,
+.main .rectangle-27,
+.main .rectangle-28,
+.main .rectangle-29,
+.main .rectangle-30,
+.main .rectangle-31,
+.main .rectangle-32,
+.main .rectangle-33,
+.main .rectangle-34,
+.main .rectangle-35,
+.main .rectangle-36,
+.main .rectangle-37,
+.main .rectangle-38,
+.main .rectangle-39,
+.main .rectangle-40,
+.main .rectangle-41,
+.main .rectangle-42,
+.main .rectangle-43,
+.main .rectangle-44,
+.main .rectangle-45,
+.main .rectangle-46,
+.main .rectangle-47,
+.main .rectangle-48,
+.main .rectangle-49,
+.main .rectangle-50,
+.main .rectangle-51,
+.main .rectangle-52,
+.main .rectangle-53,
+.main .rectangle-54 {
+    border-radius: 10px;
+    background: radial-gradient(50% 50% at 50% 50%, #9A830C 0%, #D6D92E 100%);
+    width: 74px;
+    height: 83px;
 }
 
-.fighter_name, .villain_name {
-font-family: "kof";
+.fighter_name,
+.villain_name {
+    font-family: "kof";
 }
 
 body {
@@ -22,769 +61,770 @@ body {
 }
 
 .main .bg {
-background: url('../assets/images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
-position: absolute;
-left: 0;
-top: 0;
-width: 100vw;
-height: 100vh;
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
+    background: url('./assets/images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .main .fighter_bg {
-background: url('../assets/images/camada_191.png') 50% / cover no-repeat;
-position: relative;
-margin-bottom: 22px;
-width: 437.5px;
-height: 335.5px;
+    background: url('./assets/images/camada_191.png') 50% / cover no-repeat;
+    position: relative;
+    margin-bottom: 22px;
+    width: 437.5px;
+    height: 335.5px;
 }
 
 .main .fighter_pic {
-background: url('../assets/images/image_45.png') 50% / cover no-repeat;
-position: absolute;
-left: 10.5px;
-top: 9px;
-width: 422.5px;
-height: 322px;
+    background: url('./assets/images/image_45.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 10.5px;
+    top: 9px;
+    width: 422.5px;
+    height: 322px;
 }
 
 .main .villain_pic {
-background: url('../assets/images/camada_201.png') 50% / cover no-repeat;
-position: relative;
-margin-bottom: 22px;
-width: 437.5px;
-height: 335.5px;
+    background: url('./assets/images/camada_201.png') 50% / cover no-repeat;
+    position: relative;
+    margin-bottom: 22px;
+    width: 437.5px;
+    height: 335.5px;
 }
 
 .main .pics {
-margin-right: 16px;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 437.5px;
-box-sizing: border-box;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 437.5px;
+    box-sizing: border-box;
 }
 
 .main .fighter_order {
-background: url('../assets/images/camada_22_copiar_1.png') 50% / cover no-repeat;
-margin: 0 1.5px 330px 0.5px;
-width: 34px;
-height: 32px;
+    background: url('./assets/images/camada_22_copiar_1.png') 50% / cover no-repeat;
+    margin: 0 1.5px 330px 0.5px;
+    width: 34px;
+    height: 32px;
 }
 
 .main .villains_order {
-background: url('../assets/images/camada_221.png') 50% / cover no-repeat;
-width: 36px;
-height: 102px;
+    background: url('./assets/images/camada_221.png') 50% / cover no-repeat;
+    width: 36px;
+    height: 102px;
 }
 
 .main .order {
-margin: 153px 2.5px 76.5px 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 36px;
-height: fit-content;
-box-sizing: border-box;
+    margin: 153px 2.5px 76.5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 36px;
+    height: fit-content;
+    box-sizing: border-box;
 }
 
 .main .fighter {
-position: absolute;
-bottom: 400px;
-left: 400px;
-margin-bottom: 7px;
-display: inline-block;
-overflow-wrap: break-word;
-font-weight: 400;
-font-size: 22.5px;
-color: #FFFFFF;
-padding-top: 2.5px;
+    position: absolute;
+    bottom: 400px;
+    left: 400px;
+    margin-bottom: 7px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 22.5px;
+    color: #FFFFFF;
+    padding-top: 2.5px;
 }
 
 .fighter_text {
-position: absolute;
-bottom: 526.5px; 
-left: 492px; 
-transform: translateY(-50%);
-color: #FFFFFF; 
-font-size: 22.5px;
-font-family: 'kof';
+    position: absolute;
+    bottom: 526.5px;
+    left: 492px;
+    transform: translateY(-50%);
+    color: #FFFFFF;
+    font-size: 22.5px;
+    font-family: 'kof';
 }
 
-.fighter_boardtext, .villain_boardtext {
-position: absolute;
-top: 27.5px; 
-left: 175px; 
-transform: translate(-50%, -50%);
-color: #FFFFFF;
-font-size: 35px; 
-font-family: 'kof';
+.fighter_boardtext,
+.villain_boardtext {
+    position: absolute;
+    top: 27.5px;
+    left: 175px;
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 35px;
+    font-family: 'kof';
 }
 
 .main .apocalypse {
-margin-bottom: 7px;
-display: inline-block;
-overflow-wrap: break-word;
-font-weight: 400;
-font-size: 22.5px;
-color: #FFFFFF;
-padding-top: 2.5px;
+    margin-bottom: 7px;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 22.5px;
+    color: #FFFFFF;
+    padding-top: 2.5px;
 }
 
 .main .mr-sinister {
-margin: 0 5.05px 8px 0;
-display: inline-block;
-overflow-wrap: break-word;
-font-weight: 400;
-font-size: 22.5px;
-color: #FFFFFF;
-padding-top: 8.5px;
+    margin: 0 5.05px 8px 0;
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 22.5px;
+    color: #FFFFFF;
+    padding-top: 8.5px;
 }
 
 .main .bastion {
-align-self: flex-start;
-overflow-wrap: break-word;
-font-weight: 400;
-font-size: 22.5px;
-color: #FFFFFF;
-padding-top: 7px;
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 22.5px;
+    color: #FFFFFF;
+    padding-top: 7px;
 }
 
 .main .villain_name {
-margin: 519px 134.95px 0px 0px;
-display: flex;
-flex-direction: column;
-box-sizing: border-box;
+    margin: 519px 134.95px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .main .teams {
-position: relative;
-display: flex;
-flex-direction: row;
-column-gap: 3.5px;
-width: 227px;
-height: fit-content;
-box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3.5px;
+    width: 227px;
+    height: fit-content;
+    box-sizing: border-box;
 }
 
 .main .cyclops {
-border-radius: 15px;
-background: url('../assets/images/image_2.png') 50% / cover no-repeat;
-position: absolute;
-left: 11.5px;
-bottom: 0.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_2.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 11.5px;
+    bottom: 0.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .emma {
-border-radius: 15px;
-background: url('../assets/images/image_3.png') 50% / cover no-repeat;
-position: absolute;
-top: 11.5px;
-right: 6.5px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_3.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 11.5px;
+    right: 6.5px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .jean {
-border-radius: 15px;
-background: url('../assets/images/jean.png') 50% / cover no-repeat;
-position: absolute;
-right: 83.5px;
-bottom: 4.5px;
-width: 73px;
-height: 81.5px;
+    border-radius: 15px;
+    background: url('./assets/images/jean.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 83.5px;
+    bottom: 4.5px;
+    width: 73px;
+    height: 81.5px;
 }
 
 .main .kitty {
-border-radius: 15px;
-background: url('../assets/images/kitty.png') 50% / cover no-repeat;
-position: absolute;
-left: 6.5px;
-bottom: 0.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/kitty.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 6.5px;
+    bottom: 0.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .colossus {
-border-radius: 15px;
-background: url('../assets/images/colossus.png') 50% / cover no-repeat;
-position: absolute;
-left: 83px;
-bottom: 0.5px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/colossus.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 83px;
+    bottom: 0.5px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .jubilee {
-border-radius: 15px;
-background: url('../assets/images/jubilee.png') 50% / cover no-repeat;
-position: absolute;
-left: 160.5px;
-bottom: 4.5px;
-width: 73px;
-height: 79px;
+    border-radius: 15px;
+    background: url('./assets/images/jubilee.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 160.5px;
+    bottom: 4.5px;
+    width: 73px;
+    height: 79px;
 }
 
 .main .wolverine {
-border-radius: 15px;
-background: url('../assets/images/image_5.png') 50% / cover no-repeat;
-position: absolute;
-top: 11px;
-right: 159.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_5.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 11px;
+    right: 159.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .x23 {
-border-radius: 15px;
-background: url('../assets/images/image_11.png') 50% / cover no-repeat;
-position: absolute;
-top: 11px;
-right: 83.5px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_11.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 11px;
+    right: 83.5px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .daken {
-border-radius: 15px;
-background: url('../assets/images/image_10.png') 50% / cover no-repeat;
-position: absolute;
-right: 6.5px;
-bottom: 3.5px;
-width: 127px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_10.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 6.5px;
+    bottom: 3.5px;
+    width: 127px;
+    height: 83px;
 }
 
 .main .nightcrawler {
-border-radius: 15px;
-background: url('../assets/images/image_12.png') 50% / cover no-repeat;
-position: absolute;
-top: 8px;
-right: 164.5px;
-width: 74px;
-height: 87px;
+    border-radius: 15px;
+    background: url('./assets/images/image_12.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 8px;
+    right: 164.5px;
+    width: 74px;
+    height: 87px;
 }
 
 .main .storm {
-border-radius: 15px;
-background: url('../assets/images/image_14.png') 50% / cover no-repeat;
-position: absolute;
-top: 11px;
-right: 88px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_14.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 11px;
+    right: 88px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .psylocke {
-border-radius: 15px;
-background: url('../assets/images/image_13.png') 50% / cover no-repeat;
-position: absolute;
-top: 7px;
-right: 11.5px;
-width: 73px;
-height: 88px;
+    border-radius: 15px;
+    background: url('./assets/images/image_13.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 7px;
+    right: 11.5px;
+    width: 73px;
+    height: 88px;
 }
 
 .main .angel {
-border-radius: 15px;
-background: url('../assets/images/image_32.png') 50% / cover no-repeat;
-position: absolute;
-left: 11.5px;
-bottom: 1px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_32.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 11.5px;
+    bottom: 1px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .iceman {
-border-radius: 15px;
-background: url('../assets/images/image_34.png') 50% / cover no-repeat;
-position: absolute;
-right: 83px;
-bottom: 1px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_34.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 83px;
+    bottom: 1px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .beast {
-border-radius: 15px;
-background: url('../assets/images/image_33.png') 50% / cover no-repeat;
-position: absolute;
-right: 6.5px;
-bottom: 0px;
-width: 73px;
-height: 88px;
+    border-radius: 15px;
+    background: url('./assets/images/image_33.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 6.5px;
+    bottom: 0px;
+    width: 73px;
+    height: 88px;
 }
 
 .main .rogue {
-border-radius: 15px;
-background: url('../assets/images/image_35.png') 50% / cover no-repeat;
-position: absolute;
-left: 6.5px;
-bottom: 1px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_35.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 6.5px;
+    bottom: 1px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .gambit {
-border-radius: 15px;
-background: url('../assets/images/image_37.png') 50% / cover no-repeat;
-position: absolute;
-left: 84px;
-bottom: 0px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_37.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 84px;
+    bottom: 0px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .bishop {
-border-radius: 15px;
-background: url('../assets/images/image_36.png') 50% / cover no-repeat;
-position: absolute;
-right: 11.5px;
-bottom: 0px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_36.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 11.5px;
+    bottom: 0px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .timer {
-background: url('../assets/images/camada_231.png') 50% / cover no-repeat;
-width: 222px;
-height: 82px;
+    background: url('./assets/images/camada_231.png') 50% / cover no-repeat;
+    width: 222px;
+    height: 82px;
 }
 
 .main .archangel {
-border-radius: 15px;
-background: url('../assets/images/image_38.png') 50% / cover no-repeat;
-position: absolute;
-left: 6.5px;
-bottom: 1.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_38.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 6.5px;
+    bottom: 1.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .phoenix_cyclops {
-border-radius: 15px;
-background: url('../assets/images/image_40.png') 50% / cover no-repeat;
-position: absolute;
-left: 79.5px;
-bottom: 5.5px;
-width: 80px;
-height: 73px;
+    border-radius: 15px;
+    background: url('./assets/images/image_40.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 79.5px;
+    bottom: 5.5px;
+    width: 80px;
+    height: 73px;
 }
 
 .main .phoenix {
-border-radius: 15px;
-background: url('../assets/images/image_41.png') 50% / cover no-repeat;
-position: absolute;
-right: 11.5px;
-bottom: 1.5px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_41.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 11.5px;
+    bottom: 1.5px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .cable {
-border-radius: 15px;
-background: url('../assets/images/image_15.png') 50% / cover no-repeat;
-position: absolute;
-left: 11.5px;
-bottom: 0.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_15.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 11.5px;
+    bottom: 0.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .deadpool {
-border-radius: 15px;
-background: url('../assets/images/image_17.png') 50% / cover no-repeat;
-position: absolute;
-right: 83.5px;
-bottom: 0.5px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_17.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 83.5px;
+    bottom: 0.5px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .domino {
-border-radius: 15px;
-background: url('../assets/images/image_16.png') 50% / cover no-repeat;
-position: absolute;
-right: 6.5px;
-bottom: 0.5px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_16.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 6.5px;
+    bottom: 0.5px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .magik {
-border-radius: 15px;
-background: url('../assets/images/image_18.png') 50% / cover no-repeat;
-position: absolute;
-left: 6.5px;
-bottom: 0.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_18.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 6.5px;
+    bottom: 0.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .sunspot {
-border-radius: 15px;
-background: url('../assets/images/image_20.png') 50% / cover no-repeat;
-position: absolute;
-left: 84px;
-bottom: 0.5px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_20.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 84px;
+    bottom: 0.5px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .magma {
-border-radius: 15px;
-background: url('../assets/images/image_19.png') 50% / cover no-repeat;
-position: absolute;
-right: 11.5px;
-bottom: 4.5px;
-width: 73px;
-height: 105px;
+    border-radius: 15px;
+    background: url('./assets/images/image_19.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 11.5px;
+    bottom: 4.5px;
+    width: 73px;
+    height: 105px;
 }
 
 .main .xavier {
-border-radius: 15px;
-background: url('../assets/images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
-position: absolute;
-top: 18px;
-right: 160.5px;
-width: 73px;
-height: 72.5px;
+    border-radius: 15px;
+    background: url('./assets/images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
+    position: absolute;
+    top: 18px;
+    right: 160.5px;
+    width: 73px;
+    height: 72.5px;
 }
 
 .main .magneto {
-border-radius: 15px;
-background: url('../assets/images/image_23.png') 50% / cover no-repeat;
-position: absolute;
-top: 11.5px;
-right: 83px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_23.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 11.5px;
+    right: 83px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .banshee {
-border-radius: 15px;
-background: url('../assets/images/image_22.png') 50% / cover no-repeat;
-position: absolute;
-top: 3.5px;
-left: 160.5px;
-width: 80px;
-height: 87px;
+    border-radius: 15px;
+    background: url('./assets/images/image_22.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 3.5px;
+    left: 160.5px;
+    width: 80px;
+    height: 87px;
 }
 
 .main .havok {
-border-radius: 15px;
-background: url('../assets/images/image_24.png') 50% / cover no-repeat;
-position: absolute;
-left: 6.5px;
-top: 11.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_24.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 6.5px;
+    top: 11.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .polaris {
-border-radius: 15px;
-background: url('../assets/images/image_26.png') 50% / cover no-repeat;
-position: absolute;
-left: 82.5px;
-top: 10px;
-width: 74.5px;
-height: 80.5px;
+    border-radius: 15px;
+    background: url('./assets/images/image_26.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 82.5px;
+    top: 10px;
+    width: 74.5px;
+    height: 80.5px;
 }
 
 .main .juggernaut {
-border-radius: 15px;
-background: url('../assets/images/image_25.png') 50% / cover no-repeat;
-position: absolute;
-top: 15.5px;
-right: 10.5px;
-width: 76.5px;
-height: 79px;
+    border-radius: 15px;
+    background: url('./assets/images/image_25.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 15.5px;
+    right: 10.5px;
+    width: 76.5px;
+    height: 79px;
 }
 
 .main .scarletwitch {
-border-radius: 15px;
-background: url('../assets/images/image_27.png') 50% / cover no-repeat;
-position: absolute;
-left: 11.5px;
-top: 11.5px;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_27.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 11.5px;
+    top: 11.5px;
+    width: 74px;
+    height: 83px;
 }
 
 .main .quicksilver {
-border-radius: 15px;
-background: url('../assets/images/image_29.png') 50% / cover no-repeat;
-position: absolute;
-right: 83.5px;
-top: 11px;
-width: 73px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_29.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 83.5px;
+    top: 11px;
+    width: 73px;
+    height: 83px;
 }
 
 .main .mystique {
-border-radius: 15px;
-background: url('../assets/images/Image.png') 50% / cover no-repeat;
-position: absolute;
-right: 6.5px;
-bottom: 5px;
-width: 73px;
-height: 77px;
+    border-radius: 15px;
+    background: url('./assets/images/Image.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 6.5px;
+    bottom: 5px;
+    width: 73px;
+    height: 77px;
 }
 
 .main .rachel {
-border-radius: 15px;
-background: url('../assets/images/image_42.png') 50% / cover no-repeat;
-position: absolute;
-width: 74px;
-height: 83px;
+    border-radius: 15px;
+    background: url('./assets/images/image_42.png') 50% / cover no-repeat;
+    position: absolute;
+    width: 74px;
+    height: 83px;
 }
 
 .main .madelyne {
-border-radius: 15px;
-background: url('../assets/images/image_31.png') 50% / cover no-repeat;
-position: absolute;
-left: 83px;
-bottom: 5px;
-width: 74px;
-height: 100.5px;
+    border-radius: 15px;
+    background: url('./assets/images/image_31.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 83px;
+    bottom: 5px;
+    width: 74px;
+    height: 100.5px;
 }
 
 .main .hope {
-border-radius: 15px;
-background: url('../assets/images/image_30.png') 50% / cover no-repeat;
-position: absolute;
-right: 11.5px;
-bottom: 5px;
-width: 73px;
-height: 91.5px;
+    border-radius: 15px;
+    background: url('./assets/images/image_30.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 11.5px;
+    bottom: 5px;
+    width: 73px;
+    height: 91.5px;
 }
 
 .main .team1 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-padding: 6.5px 6.5px 4.5px 11.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    padding: 6.5px 6.5px 4.5px 11.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team3 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-padding: 7.5px 6.5px 3.5px 11.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    padding: 7.5px 6.5px 3.5px 11.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team5 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 12.5px;
-display: flex;
-padding: 6px 6.5px 5px 11.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 12.5px;
+    display: flex;
+    padding: 6px 6.5px 5px 11.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .counter {
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 12.5px;
-display: flex;
-padding: 6px 11.5px;
-width: 245px;
-height: 94px;
-box-sizing: border-box;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 12.5px;
+    display: flex;
+    padding: 6px 11.5px;
+    width: 245px;
+    height: 94px;
+    box-sizing: border-box;
 }
 
 .main .team8 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-padding: 6.5px 6.5px 4.5px 11.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    padding: 6.5px 6.5px 4.5px 11.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team10 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-flex-direction: row;
-column-gap: 3.5px;
-padding: 7.5px 6.5px 3.5px 11.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3.5px;
+    padding: 7.5px 6.5px 3.5px 11.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team12 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-display: flex;
-padding: 6px 6.5px 5px 11.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    display: flex;
+    padding: 6px 6.5px 5px 11.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .left_chars {
-margin: 2px 9px 0 0;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 245px;
-height: fit-content;
-box-sizing: border-box;
+    margin: 2px 9px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 245px;
+    height: fit-content;
+    box-sizing: border-box;
 }
 
 .main .team2 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-padding: 6.5px 11.5px 4.5px 6.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    padding: 6.5px 11.5px 4.5px 6.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team4 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-flex-direction: row;
-column-gap: 3.5px;
-padding: 7.5px 11.5px 3.5px 6.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3.5px;
+    padding: 7.5px 11.5px 3.5px 6.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team6 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 12.5px;
-display: flex;
-padding: 6px 11.5px 5px 6.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 12.5px;
+    display: flex;
+    padding: 6px 11.5px 5px 6.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team7 {
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 12.5px;
-display: flex;
-padding: 5.5px 11.5px 5.5px 6.5px;
-width: 245px;
-box-sizing: border-box;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 12.5px;
+    display: flex;
+    padding: 5.5px 11.5px 5.5px 6.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team9 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-padding: 6.5px 11.5px 4.5px 6.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    padding: 6.5px 11.5px 4.5px 6.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team11 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-margin-bottom: 5px;
-display: flex;
-flex-direction: row;
-column-gap: 3.5px;
-padding: 7.5px 11.5px 3.5px 6.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3.5px;
+    padding: 7.5px 11.5px 3.5px 6.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .team13 {
-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-background: linear-gradient(180deg, #920505, #B70303, #DC0000);
-position: relative;
-display: flex;
-flex-direction: row;
-column-gap: 3.5px;
-padding: 6px 11.5px 5px 6.5px;
-width: 245px;
-box-sizing: border-box;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3.5px;
+    padding: 6px 11.5px 5px 6.5px;
+    width: 245px;
+    box-sizing: border-box;
 }
 
 .main .right_chars {
-margin-top: 2px;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 245px;
-height: fit-content;
-box-sizing: border-box;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 245px;
+    height: fit-content;
+    box-sizing: border-box;
 }
 
 .main .select_screen {
-position: relative;
-display: flex;
-flex-direction: row;
-box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
 }
 
 .main .fighter_board {
-background: url('../assets/images/camada_212.png') 50% / cover no-repeat;
-position: absolute;
-left: 378px;
-top: 281.5px;
-width: 352.5px;
-height: 54px;
+    background: url('./assets/images/camada_212.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 378px;
+    top: 281.5px;
+    width: 352.5px;
+    height: 54px;
 }
 
 .main .villain_board {
-background: url('../assets/images/camada_212.png') 50% / cover no-repeat;
-position: absolute;
-left: 378px;
-bottom: 21px;
-width: 352.5px;
-height: 54px;
+    background: url('./assets/images/camada_212.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 378px;
+    bottom: 21px;
+    width: 352.5px;
+    height: 54px;
 }
 
 .main {
-background: #FFFFFF;
-display: flex;
-padding: 0 14.5px 0 15.5px;
-width: 1280px;
-box-sizing: border-box;
+    background: #FFFFFF;
+    display: flex;
+    padding: 0 14.5px 0 15.5px;
+    width: 1280px;
+    box-sizing: border-box;
 }
