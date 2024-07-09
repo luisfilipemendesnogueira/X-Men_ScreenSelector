@@ -1,0 +1,1593 @@
+@media (max-width: 1120px){
+@font-face {
+    font-family: 'kof';
+    src: url('./assets/font/the-king-of-fighters-2002.ttf') format('truetype'), url('./assets/font/the-king-of-fighters-2002.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    
+    .main .rectangle-16, .main .rectangle-17, .main .rectangle-18, .main .rectangle-19, .main .rectangle-20, .main .rectangle-21, .main .rectangle-22, .main .rectangle-23, .main .rectangle-24, .main .rectangle-25, .main .rectangle-26, .main .rectangle-27, .main .rectangle-28, .main .rectangle-29, .main .rectangle-30, .main .rectangle-31, .main .rectangle-32, .main .rectangle-33, .main .rectangle-34, .main .rectangle-35, .main .rectangle-36, .main .rectangle-37, .main .rectangle-38, .main .rectangle-39, .main .rectangle-40, .main .rectangle-41, .main .rectangle-42, .main .rectangle-43, .main .rectangle-44, .main .rectangle-45, .main .rectangle-46, .main .rectangle-47, .main .rectangle-48, .main .rectangle-49, .main .rectangle-50, .main .rectangle-51, .main .rectangle-52, .main .rectangle-53, .main .rectangle-54 {
+    border-radius: 10px;
+    background: radial-gradient(50% 50% at 50% 50%, #9A830C 0%, #D6D92E 100%);
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .fighter_name, .villain_name {
+    font-family: "kof";
+    }
+    
+    body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    }
+    
+    .main .bg {
+    background: url('../assets/images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 112%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    
+    .main .fighter_bg {
+    background: url('../assets/images/camada_191.png') 50% / cover no-repeat;
+    position: relative;
+    margin-bottom: 11px; /* 22px / 2 */
+    width: 218.75px; /* 437.5px / 2 */
+    height: 167.75px; /* 335.5px / 2 */
+    }
+    
+    .main .fighter_pic {
+    background: url('../assets/images/image_45.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.25px; /* 10.5px / 2 */
+    top: 4.5px; /* 9px / 2 */
+    width: 211.25px; /* 422.5px / 2 */
+    height: 161px; /* 322px / 2 */
+    }
+    
+    .main .villain_pic {
+    background: url('../assets/images/camada_201.png') 50% / cover no-repeat;
+    position: relative;
+    margin-bottom: 11px; /* 22px / 2 */
+    width: 218.75px; /* 437.5px / 2 */
+    height: 167.75px; /* 335.5px / 2 */
+    }
+    
+    .main .pics {
+    margin-right: 8px; /* 16px / 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 218.75px; /* 437.5px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .fighter_order {
+    background: url('../assets/images/camada_22_copiar_1.png') 50% / cover no-repeat;
+    margin: 0 0.75px 165px 0.25px; /* 1.5px / 2 */
+    width: 17px; /* 34px / 2 */
+    height: 16px; /* 32px / 2 */
+    }
+    
+    .main .villains_order {
+    background: url('../assets/images/camada_221.png') 50% / cover no-repeat;
+    width: 18px; /* 36px / 2 */
+    height: 51px; /* 102px / 2 */
+}
+    
+    .main .order {
+    margin: 76.5px 1.25px 38.25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18px; /* 36px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+    }
+    
+    .main .fighter {
+    position: absolute;
+    bottom: 200px; /* 400px / 2 */
+    left: 200px; /* 400px / 2 */
+    margin-bottom: 3.5px; /* 7px / 2 */
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 11.25px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 1.25px; /* 2.5px / 2 */
+    }
+    
+    .fighter_text {
+    position: absolute;
+    bottom: 263.25px; /* 526.5px / 2 */
+    left: 246px; /* 492px / 2 */
+    transform: translateY(-50%);
+    color: #FFFFFF;
+    font-size: 11.25px; /* 22.5px / 2 */
+    font-family: 'kof';
+    }
+    
+    .fighter_boardtext, .villain_boardtext {
+    position: absolute;
+    top: 13.75px; /* 27.5px / 2 */
+    left: 87.5px; /* 175px / 2 */
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 17.5px; /* 35px / 2 */
+    font-family: 'kof';
+    }
+    
+    .main .apocalypse {
+    margin-bottom: 3.5px; /* 7px / 2 */
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 10px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 1.25px; /* 2.5px / 2 */
+    }
+    
+    .main .mr-sinister {
+    margin: 0 2.525px 4px 0; /* 5.05px / 2 */
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 10px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 6.25px; /* 8.5px / 2 */
+    }
+    
+    .main .bastion {
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 10px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 5.5px; /* 7px / 2 */
+    }
+    
+    .main .villain_name {
+    margin: 259.5px 67.475px 0px 0px; /* 519px / 2 */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    }
+
+    .main .teams {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    width: 113.5px; /* 227px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+    }
+    
+    .main .cyclops {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_2.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .emma {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_3.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.75px; /* 11.5px / 2 */
+    right: 3.25px; /* 6.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .jean {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/jean.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.75px; /* 83.5px / 2 */
+    bottom: 2.25px; /* 4.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 40.75px; /* 81.5px / 2 */
+    }
+    
+    .main .kitty {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/kitty.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .colossus {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/colossus.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 41.5px; /* 83px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .jubilee {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/jubilee.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 80.25px; /* 160.5px / 2 */
+    bottom: 2.25px; /* 4.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 39.5px; /* 79px / 2 */
+    }
+    
+    .main .wolverine {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_5.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.5px; /* 11px / 2 */
+    right: 79.75px; /* 159.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .x23 {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_11.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.5px; /* 11px / 2 */
+    right: 41.75px; /* 83.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .daken {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_10.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 1.75px; /* 3.5px / 2 */
+    width: 63.5px; /* 127px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .nightcrawler {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_12.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 4px; /* 8px / 2 */
+    right: 82.25px; /* 164.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 43.5px; /* 87px / 2 */
+    }
+    
+    .main .storm {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_14.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.5px; /* 11px / 2 */
+    right: 44px; /* 88px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .psylocke {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_13.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 3.5px; /* 7px / 2 */
+    right: 5.75px; /* 11.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 44px; /* 88px / 2 */
+    }
+    
+    .main .angel {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_32.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    bottom: 0.5px; /* 1px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .iceman {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_34.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.5px; /* 83px / 2 */
+    bottom: 0.5px; /* 1px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .beast {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_33.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 0px; /* 0px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 44px; /* 88px / 2 */
+    }
+    
+    .main .rogue {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_35.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.5px; /* 1px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .gambit {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_37.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 42px; /* 84px / 2 */
+    bottom: 0px; /* 0px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .bishop {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_36.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 0px; /* 0px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }      
+
+    .main .timer {
+    background: url('../assets/images/camada_231.png') 50% / cover no-repeat;
+    width: 111px; /* 222px / 2 */
+    height: 41px; /* 82px / 2 */
+    }
+    
+    .main .archangel {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_38.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.75px; /* 1.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .phoenix_cyclops {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_40.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 39.75px; /* 79.5px / 2 */
+    bottom: 2.75px; /* 5.5px / 2 */
+    width: 40px; /* 80px / 2 */
+    height: 36.5px; /* 73px / 2 */
+    }
+    
+    .main .phoenix {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_41.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 0.75px; /* 1.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .cable {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_15.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .deadpool {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_17.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.75px; /* 83.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .domino {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_16.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .magik {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_18.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .sunspot {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_20.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 42px; /* 84px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .magma {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_19.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 2.25px; /* 4.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 52.5px; /* 105px / 2 */
+    }
+    
+    .main .xavier {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
+    position: absolute;
+    top: 9px; /* 18px / 2 */
+    right: 80.25px; /* 160.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 36.25px; /* 72.5px / 2 */
+    }
+    
+    .main .magneto {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_23.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.75px; /* 11.5px / 2 */
+    right: 41.5px; /* 83px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .banshee {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_22.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 1.75px; /* 3.5px / 2 */
+    left: 80.25px; /* 160.5px / 2 */
+    width: 40px; /* 80px / 2 */
+    height: 43.5px; /* 87px / 2 */
+    }
+    
+    .main .havok {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_24.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    top: 5.75px; /* 11.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .polaris {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_26.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 41.25px; /* 82.5px / 2 */
+    top: 5px; /* 10px / 2 */
+    width: 37.25px; /* 74.5px / 2 */
+    height: 40.25px; /* 80.5px / 2 */
+    }
+    
+    .main .juggernaut {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_25.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 7.75px; /* 15.5px / 2 */
+    right: 5.25px; /* 10.5px / 2 */
+    width: 38.25px; /* 76.5px / 2 */
+    height: 39.5px; /* 79px / 2 */
+    }
+    
+    .main .scarletwitch {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_27.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    top: 5.75px; /* 11.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .quicksilver {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_29.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.75px; /* 83.5px / 2 */
+    top: 5.5px; /* 11px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .mystique {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/Image.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 2.5px; /* 5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 38.5px; /* 77px / 2 */
+    }
+    
+    .main .rachel {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_42.png') 50% / cover no-repeat;
+    position: absolute;
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+    }
+    
+    .main .madelyne {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_31.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 41.5px; /* 83px / 2 */
+    bottom: 2.5px; /* 5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 50.25px; /* 100.5px / 2 */
+    }
+    
+    .main .hope {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_30.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 2.5px; /* 5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 45.75px; /* 91.5px / 2 */
+    }      
+
+    .main .team1 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 3.25px 2.25px 5.75px; /* 6.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team3 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.75px 3.25px 1.75px 5.75px; /* 7.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team5 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 3px 3.25px 2.5px 5.75px; /* 6px / 2, 5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .counter {
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 3px 5.75px; /* 6px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    height: 47px; /* 94px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team8 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 3.25px 2.25px 5.75px; /* 6.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team10 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3.75px 3.25px 1.75px 5.75px; /* 7.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team12 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    display: flex;
+    padding: 3px 3.25px 2.5px 5.75px; /* 6px / 2, 5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .left_chars {
+    margin: 350px 4.5px 0 0; /* 2px / 2, 9px / 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 122.5px; /* 245px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+    position: absolute;
+    }
+    
+    .main .team2 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 5.75px 2.25px 3.25px; /* 6.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team4 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3.75px 5.75px 1.75px 3.25px; /* 7.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team6 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 3px 5.75px 2.5px 3.25px; /* 6px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team7 {
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 2.75px 5.75px 2.75px 3.25px; /* 5.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team9 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 5.75px 2.25px 3.25px; /* 6.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team11 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3.75px 5.75px 1.75px 3.25px; /* 7.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .team13 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3px 5.75px 2.5px 3.25px; /* 6px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+    }
+    
+    .main .right_chars {
+    margin-top: 350px; /* 2px / 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 122.5px; /* 245px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+    position: absolute;
+    padding-left: 190px;
+    }
+    
+    .main .select_screen {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    }
+    
+    .main .fighter_board {
+    background: url('../assets/images/camada_212.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 189px; /* 378px / 2 */
+    top: 140.75px; /* 281.5px / 2 */
+    width: 176.25px; /* 352.5px / 2 */
+    height: 27px; /* 54px / 2 */
+    }
+    
+    .main .villain_board {
+    background: url('../assets/images/camada_212.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 189px; /* 378px / 2 */
+    bottom: 11px;
+    width: 176.25px; /* 352.5px / 2 */
+    height: 27px; /* 54px / 2 */
+    }
+    
+    .main {
+    background: #FFFFFF;
+    display: flex;
+    padding: 0 7.25px 0 7.75px; /* 14.5px / 2, 15.5px / 2 */
+    width: 640px; /* 1280px / 2 */
+    box-sizing: border-box;
+    }      
+}
+
+@media (max-width: 600px){
+@font-face {
+    font-family: 'kof';
+    src: url('./assets/font/the-king-of-fighters-2002.ttf') format('truetype'), url('./assets/font/the-king-of-fighters-2002.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.main .rectangle-16, .main .rectangle-17, .main .rectangle-18, .main .rectangle-19, .main .rectangle-20, .main .rectangle-21, .main .rectangle-22, .main .rectangle-23, .main .rectangle-24, .main .rectangle-25, .main .rectangle-26, .main .rectangle-27, .main .rectangle-28, .main .rectangle-29, .main .rectangle-30, .main .rectangle-31, .main .rectangle-32, .main .rectangle-33, .main .rectangle-34, .main .rectangle-35, .main .rectangle-36, .main .rectangle-37, .main .rectangle-38, .main .rectangle-39, .main .rectangle-40, .main .rectangle-41, .main .rectangle-42, .main .rectangle-43, .main .rectangle-44, .main .rectangle-45, .main .rectangle-46, .main .rectangle-47, .main .rectangle-48, .main .rectangle-49, .main .rectangle-50, .main .rectangle-51, .main .rectangle-52, .main .rectangle-53, .main .rectangle-54 {
+    border-radius: 10px;
+    background: radial-gradient(50% 50% at 50% 50%, #9A830C 0%, #D6D92E 100%);
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.fighter_name, .villain_name {
+    font-family: "kof";
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.main .bg {
+    background: url('../assets/images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 140%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.main .fighter_bg {
+    background: url('../assets/images/camada_191.png') 50% / cover no-repeat;
+    position: relative;
+    margin-bottom: 11px; /* 22px / 2 */
+    width: 218.75px; /* 437.5px / 2 */
+    height: 167.75px; /* 335.5px / 2 */
+}
+
+.main .fighter_pic {
+    background: url('../assets/images/image_45.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.25px; /* 10.5px / 2 */
+    top: 4.5px; /* 9px / 2 */
+    width: 211.25px; /* 422.5px / 2 */
+    height: 161px; /* 322px / 2 */
+}
+
+.main .villain_pic {
+    background: url('../assets/images/camada_201.png') 50% / cover no-repeat;
+    position: relative;
+    margin-bottom: 11px; /* 22px / 2 */
+    width: 218.75px; /* 437.5px / 2 */
+    height: 167.75px; /* 335.5px / 2 */
+}
+
+.main .pics {
+    margin-right: 8px; /* 16px / 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 218.75px; /* 437.5px / 2 */
+    box-sizing: border-box;
+}
+
+.main .fighter_order {
+    background: url('../assets/images/camada_22_copiar_1.png') 50% / cover no-repeat;
+    margin: 0 0.75px 165px 0.25px; /* 1.5px / 2 */
+    width: 17px; /* 34px / 2 */
+    height: 16px; /* 32px / 2 */
+}
+
+.main .villains_order {
+    background: url('../assets/images/camada_221.png') 50% / cover no-repeat;
+    width: 18px; /* 36px / 2 */
+    height: 51px; /* 102px / 2 */
+}
+
+.main .order {
+    margin: 76.5px 1.25px 38.25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 18px; /* 36px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.main .fighter {
+    position: absolute;
+    bottom: 200px; /* 400px / 2 */
+    left: 200px; /* 400px / 2 */
+    margin-bottom: 3.5px; /* 7px / 2 */
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 11.25px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 1.25px; /* 2.5px / 2 */
+}
+
+.fighter_text {
+    position: absolute;
+    bottom: 265.25px; /* 526.5px / 2 */
+    left: 246px; /* 492px / 2 */
+    transform: translateY(-50%);
+    color: #FFFFFF;
+    font-size: 8.25px; /* 22.5px / 2 */
+    font-family: 'kof';
+}
+
+.fighter_boardtext, .villain_boardtext {
+    position: absolute;
+    top: 13.75px; /* 27.5px / 2 */
+    left: 70.5px; /* 175px / 2 */
+    transform: translate(-50%, -50%);
+    color: #FFFFFF;
+    font-size: 10.5px; /* 35px / 2 */
+    font-family: 'kof';
+}
+
+.main .apocalypse {
+    margin-bottom: 3.5px; /* 7px / 2 */
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 5px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 4.25px; /* 2.5px / 2 */
+}
+
+.main .mr-sinister {
+    margin: 0 2.525px 4px 0; /* 5.05px / 2 */
+    display: inline-block;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 5px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 11.25px; /* 8.5px / 2 */
+}
+
+.main .bastion {
+    align-self: flex-start;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 5px; /* 22.5px / 2 */
+    color: #FFFFFF;
+    padding-top: 8.5px; /* 7px / 2 */
+}
+
+.main .villain_name {
+    margin: 259.5px 67.475px 0px 0px; /* 519px / 2 */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.main .teams {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    width: 113.5px; /* 227px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.main .cyclops {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_2.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .emma {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_3.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.75px; /* 11.5px / 2 */
+    right: 3.25px; /* 6.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .jean {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/jean.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.75px; /* 83.5px / 2 */
+    bottom: 2.25px; /* 4.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 40.75px; /* 81.5px / 2 */
+}
+
+.main .kitty {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/kitty.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .colossus {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/colossus.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 41.5px; /* 83px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .jubilee {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/jubilee.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 80.25px; /* 160.5px / 2 */
+    bottom: 2.25px; /* 4.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 39.5px; /* 79px / 2 */
+}
+
+.main .wolverine {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_5.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.5px; /* 11px / 2 */
+    right: 79.75px; /* 159.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .x23 {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_11.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.5px; /* 11px / 2 */
+    right: 41.75px; /* 83.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .daken {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_10.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 1.75px; /* 3.5px / 2 */
+    width: 63.5px; /* 127px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .nightcrawler {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_12.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 4px; /* 8px / 2 */
+    right: 82.25px; /* 164.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 43.5px; /* 87px / 2 */
+}
+
+.main .storm {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_14.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.5px; /* 11px / 2 */
+    right: 44px; /* 88px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .psylocke {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_13.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 3.5px; /* 7px / 2 */
+    right: 5.75px; /* 11.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 44px; /* 88px / 2 */
+}
+
+.main .angel {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_32.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    bottom: 0.5px; /* 1px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .iceman {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_34.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.5px; /* 83px / 2 */
+    bottom: 0.5px; /* 1px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .beast {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_33.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 0px; /* 0px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 44px; /* 88px / 2 */
+}
+
+.main .rogue {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_35.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.5px; /* 1px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .gambit {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_37.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 42px; /* 84px / 2 */
+    bottom: 0px; /* 0px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .bishop {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_36.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 0px; /* 0px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}      
+
+.main .timer {
+    background: url('../assets/images/camada_231.png') 50% / cover no-repeat;
+    width: 111px; /* 222px / 2 */
+    height: 41px; /* 82px / 2 */
+}
+
+.main .archangel {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_38.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.75px; /* 1.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .phoenix_cyclops {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_40.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 39.75px; /* 79.5px / 2 */
+    bottom: 2.75px; /* 5.5px / 2 */
+    width: 40px; /* 80px / 2 */
+    height: 36.5px; /* 73px / 2 */
+}
+
+.main .phoenix {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_41.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 0.75px; /* 1.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .cable {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_15.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .deadpool {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_17.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.75px; /* 83.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .domino {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_16.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .magik {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_18.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .sunspot {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_20.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 42px; /* 84px / 2 */
+    bottom: 0.25px; /* 0.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .magma {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_19.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 2.25px; /* 4.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 52.5px; /* 105px / 2 */
+}
+
+.main .xavier {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/imagem_2024-07-08_015202366-removebg-preview 1 (1).png') 50% / cover no-repeat;
+    position: absolute;
+    top: 9px; /* 18px / 2 */
+    right: 80.25px; /* 160.5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 36.25px; /* 72.5px / 2 */
+}
+
+.main .magneto {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_23.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 5.75px; /* 11.5px / 2 */
+    right: 41.5px; /* 83px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .banshee {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_22.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 1.75px; /* 3.5px / 2 */
+    left: 80.25px; /* 160.5px / 2 */
+    width: 40px; /* 80px / 2 */
+    height: 43.5px; /* 87px / 2 */
+}
+
+.main .havok {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_24.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 3.25px; /* 6.5px / 2 */
+    top: 5.75px; /* 11.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .polaris {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_26.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 41.25px; /* 82.5px / 2 */
+    top: 5px; /* 10px / 2 */
+    width: 37.25px; /* 74.5px / 2 */
+    height: 40.25px; /* 80.5px / 2 */
+}
+
+.main .juggernaut {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_25.png') 50% / cover no-repeat;
+    position: absolute;
+    top: 7.75px; /* 15.5px / 2 */
+    right: 5.25px; /* 10.5px / 2 */
+    width: 38.25px; /* 76.5px / 2 */
+    height: 39.5px; /* 79px / 2 */
+}
+
+.main .scarletwitch {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_27.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 5.75px; /* 11.5px / 2 */
+    top: 5.75px; /* 11.5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .quicksilver {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_29.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 41.75px; /* 83.5px / 2 */
+    top: 5.5px; /* 11px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .mystique {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/Image.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 3.25px; /* 6.5px / 2 */
+    bottom: 2.5px; /* 5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 38.5px; /* 77px / 2 */
+}
+
+.main .rachel {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_42.png') 50% / cover no-repeat;
+    position: absolute;
+    width: 37px; /* 74px / 2 */
+    height: 41.5px; /* 83px / 2 */
+}
+
+.main .madelyne {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_31.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 41.5px; /* 83px / 2 */
+    bottom: 2.5px; /* 5px / 2 */
+    width: 37px; /* 74px / 2 */
+    height: 50.25px; /* 100.5px / 2 */
+}
+
+.main .hope {
+    border-radius: 7.5px; /* 15px / 2 */
+    background: url('../assets/images/image_30.png') 50% / cover no-repeat;
+    position: absolute;
+    right: 5.75px; /* 11.5px / 2 */
+    bottom: 2.5px; /* 5px / 2 */
+    width: 36.5px; /* 73px / 2 */
+    height: 45.75px; /* 91.5px / 2 */
+}      
+
+.main .team1 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 3.25px 2.25px 5.75px; /* 6.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team3 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.75px 3.25px 1.75px 5.75px; /* 7.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team5 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 3px 3.25px 2.5px 5.75px; /* 6px / 2, 5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .counter {
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 3px 5.75px; /* 6px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    height: 47px; /* 94px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team8 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 3.25px 2.25px 5.75px; /* 6.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team10 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3.75px 3.25px 1.75px 5.75px; /* 7.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team12 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    display: flex;
+    padding: 3px 3.25px 2.5px 5.75px; /* 6px / 2, 5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .left_chars {
+    margin: 350px 4.5px 0 0; /* 2px / 2, 9px / 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 122.5px; /* 245px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.main .team2 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 5.75px 2.25px 3.25px; /* 6.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team4 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3.75px 5.75px 1.75px 3.25px; /* 7.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team6 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 3px 5.75px 2.5px 3.25px; /* 6px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team7 {
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 6.25px; /* 12.5px / 2 */
+    display: flex;
+    padding: 2.75px 5.75px 2.75px 3.25px; /* 5.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team9 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    padding: 3.25px 5.75px 2.25px 3.25px; /* 6.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team11 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    margin-bottom: 2.5px; /* 5px / 2 */
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3.75px 5.75px 1.75px 3.25px; /* 7.5px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .team13 {
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25); /* 0px 2px 2px 0px */
+    border-radius: 5px; /* 10px / 2 */
+    background: linear-gradient(180deg, #920505, #B70303, #DC0000);
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    column-gap: 1.75px; /* 3.5px / 2 */
+    padding: 3px 5.75px 2.5px 3.25px; /* 6px / 2, 11.5px / 2 */
+    width: 122.5px; /* 245px / 2 */
+    box-sizing: border-box;
+}
+
+.main .right_chars {
+    margin-top: 350px; /* 2px / 2 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 122.5px; /* 245px / 2 */
+    height: fit-content;
+    box-sizing: border-box;
+    position: absolute;
+    padding-left: 190px;
+}
+
+.main .select_screen {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.main .fighter_board {
+    background: url('../assets/images/camada_212.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 189px; /* 378px / 2 */
+    top: 140.75px; /* 281.5px / 2 */
+    width: 176.25px; /* 352.5px / 2 */
+    height: 27px; /* 54px / 2 */
+}
+
+.main .villain_board {
+    background: url('../assets/images/camada_212.png') 50% / cover no-repeat;
+    position: absolute;
+    left: 189px; /* 378px / 2 */
+    bottom: 11px;
+    width: 176.25px; /* 352.5px / 2 */
+    height: 27px; /* 54px / 2 */
+}
+
+.main {
+    background: #FFFFFF;
+    display: flex;
+    padding: 0 7.25px 0 7.75px; /* 14.5px / 2, 15.5px / 2 */
+    width: 640px; /* 1280px / 2 */
+    box-sizing: border-box;
+}      
+}
