@@ -1,7 +1,7 @@
 @media (max-width: 1120px) {
     @font-face {
         font-family: 'kof';
-        src: url('./assets/font/the-king-of-fighters-2002.ttf') format('truetype'), url('./assets/font/the-king-of-fighters-2002.otf') format('opentype');
+        src: url('./font/the-king-of-fighters-2002.ttf') format('truetype'), url('./font/the-king-of-fighters-2002.otf') format('opentype');
         font-weight: normal;
         font-style: normal;
     }
@@ -1159,7 +1159,7 @@
 @media (max-width: 600px) {
     @font-face {
         font-family: 'kof';
-        src: url('./assets/font/the-king-of-fighters-2002.ttf') format('truetype'), url('./assets/font/the-king-of-fighters-2002.otf') format('opentype');
+        src: url('./font/the-king-of-fighters-2002.ttf') format('truetype'), url('./font/the-king-of-fighters-2002.otf') format('opentype');
         font-weight: normal;
         font-style: normal;
     }
