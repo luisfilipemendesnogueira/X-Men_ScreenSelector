@@ -2,4 +2,4 @@
 
 Personagens de X-Men no Screen Selector do KOF 2002.
 
-Link:
+Link: https://luisfilipemendesnogueira.github.io/X-Men_ScreenSelector/
