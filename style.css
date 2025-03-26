@@ -1,6 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
     font-family: 'kof';
-    src: url('./font/the-king-of-fighters-2002.ttf') format('truetype'), url('./font/the-king-of-fighters-2002.otf') format('opentype');
+    src: url('./font/the-king-of-fighters-2002.ttf') format('truetype'),
+       url('./font/the-king-of-fighters-2002.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -50,19 +57,20 @@
     height: 83px;
 }
 
+
 .fighter_name,
 .villain_name {
     font-family: "kof";
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    font-family: 'kof';
+    overflow-x: hidden;
 }
 
 .main .bg {
     background: url('./images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100vw;
@@ -92,7 +100,6 @@ body {
 .main .villain_pic {
     background: url('./images/camada_201.png') 50% / cover no-repeat;
     position: relative;
-    margin-bottom: 22px;
     width: 437.5px;
     height: 335.5px;
 }
@@ -144,7 +151,7 @@ body {
 
 .fighter_text {
     position: absolute;
-    bottom: 526.5px;
+    bottom: 516.5px;
     left: 492px;
     transform: translateY(-50%);
     color: #FFFFFF;
@@ -622,7 +629,7 @@ body {
     position: relative;
     margin-bottom: 5px;
     display: flex;
-    padding: 7.5px 6.5px 3.5px 11.5px;
+    padding: 6.5px 6.5px 4.5px 11.5px;
     width: 245px;
     box-sizing: border-box;
 }
@@ -632,7 +639,7 @@ body {
     border-radius: 10px;
     background: linear-gradient(180deg, #920505, #B70303, #DC0000);
     position: relative;
-    margin-bottom: 12.5px;
+    margin-bottom: 10px;
     display: flex;
     padding: 6px 6.5px 5px 11.5px;
     width: 245px;
@@ -640,10 +647,10 @@ body {
 }
 
 .main .counter {
-    border-radius: 10px;
+    border-radius: 8px;
     background: linear-gradient(180deg, #920505, #B70303, #DC0000);
     position: relative;
-    margin-bottom: 12.5px;
+    margin-bottom: 8px;
     display: flex;
     padding: 6px 11.5px;
     width: 245px;
@@ -729,7 +736,7 @@ body {
     border-radius: 10px;
     background: linear-gradient(180deg, #920505, #B70303, #DC0000);
     position: relative;
-    margin-bottom: 12.5px;
+    margin-bottom: 10px;
     display: flex;
     padding: 6px 11.5px 5px 6.5px;
     width: 245px;
@@ -737,10 +744,10 @@ body {
 }
 
 .main .team7 {
-    border-radius: 10px;
+    border-radius: 8px;
     background: linear-gradient(180deg, #920505, #B70303, #DC0000);
     position: relative;
-    margin-bottom: 12.5px;
+    margin-bottom: 8px;
     display: flex;
     padding: 5.5px 11.5px 5.5px 6.5px;
     width: 245px;

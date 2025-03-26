@@ -66,7 +66,7 @@
 
     .main .bg {
         background: url('./images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 200%;
@@ -1224,7 +1224,7 @@
 
     .main .bg {
         background: url('./images/f_9_e_833_f_3234_e_9_bb_1_c_2_c_66_cddacd_6991.png');
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 200%;
