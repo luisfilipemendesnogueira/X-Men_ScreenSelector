@@ -151,7 +151,7 @@ body {
 
 .fighter_text {
     position: absolute;
-    bottom: 516.5px;
+    bottom: 509px;
     left: 492px;
     transform: translateY(-50%);
     color: #FFFFFF;
@@ -823,7 +823,7 @@ body {
     background: url('./images/camada_212.png') 50% / cover no-repeat;
     position: absolute;
     left: 378px;
-    bottom: 21px;
+    bottom: 4px;
     width: 352.5px;
     height: 54px;
 }
