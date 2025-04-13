@@ -34,6 +34,7 @@ body {
     background-position: center center;
     background-attachment: fixed;
     overflow: hidden;
+    overflow-y: visible;
 }
 
 .select_screen {
