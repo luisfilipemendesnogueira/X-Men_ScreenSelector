@@ -2,7 +2,7 @@
 
 /* Para telas até 1024px (tablets e pequenos laptops) */
 @media screen and (max-width: 1024px) {
-    .body{
+    body{
         overflow-x: hidden;
         overflow-y: visible;
     }
@@ -38,7 +38,7 @@
   
   /* Para telas até 768px (tablets e dispositivos intermediários) */
   @media screen and (max-width: 768px) {
-    .body{
+    body{
         overflow-x: hidden;
         overflow-y: visible;
     }
@@ -96,7 +96,7 @@
     }
     
     .sides {
-      width: 100%;
+      width: 90%;
       height: auto;
       margin: 5px 0;
     }
