@@ -86,6 +86,64 @@
     }
     
     .sides {
+      width: 100%;
+      height: auto;
+      margin: 5px 0;
+    }
+    
+    .sides#left_side {
+      grid-template: repeat(2, auto) / repeat(2, 1fr);
+    }
+    
+    .sides#right_side {
+      /* Reorganiza o grid para facilitar a visualização dos personagens */
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      gap: 5px;
+      padding: 0 5px;
+      width: 80%;
+    }
+    
+    /* Ajusta os containers dos times para ocupar toda a largura possível */
+    .teams {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .sides#right_side > :nth-child(odd) {
+        justify-self: center; /* Alinha à direita */
+    }
+    
+    .sides#right_side > :nth-child(even) {
+        justify-self: center;
+    }
+    
+    /* Reduz levemente o tamanho das imagens e dos textos */
+    .char_img {
+      border-radius: 10px;
+    }
+
+    .text{
+        font-size: 50%;
+        padding-top: 1vh;
+    }
+    .main_text {
+        font-size: 50%; 
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    /* Evita o travamento do fundo em mobile */
+    body {
+      background-attachment: scroll;
+    }
+    
+    /* Coloca as duas partes (left_side e right_side) em pilha */
+    .select_screen {
+      flex-direction: column;
+    }
+    
+    .sides {
       width: 70%;
       height: auto;
       margin: 5px 0;
