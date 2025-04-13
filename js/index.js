@@ -64,7 +64,7 @@ function alterarNomePersonagemSelecionado(personagem) {
 function alterarImagemPersonagemSelecionado(personagem) {
     const idPersonagem = personagem.id;
     const imagemPersonagemGrande = document.getElementById('hero_pic');
-    imagemPersonagemGrande.src = `./images/card-${idPersonagem}.png`;
+    imagemPersonagemGrande.src = `/X-Men_ScreenSelector/images/card-${idPersonagem}.png`;
 }
 
 function removerSelecaoDoPersonagem() {
