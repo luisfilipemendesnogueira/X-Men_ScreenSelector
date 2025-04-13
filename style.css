@@ -6,6 +6,14 @@
         url('./font/the-king-of-fighters-2002.otf') format('opentype');
 }
 
+@font-face {
+    font-family: 'kof-2002-monospaced';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./font/kof-2002-medium.ttf') format('truetype'),
+        url('./font/kof-2002-medium.otf') format('opentype');
+}
+
 :root {
     --kof_font_color: #ffffff;
     --kof_font: "kof-2002"
@@ -185,6 +193,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5px;
 }
 
 .time_text {
@@ -194,10 +203,15 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
+    font-family: 'kof-2002-monospaced';
 }
 
 .main_time {
     font-size: 3vw;
+}
+
+.dot_time {
+    font-family: 'kof-2002';
 }
 
 .decimal_time {

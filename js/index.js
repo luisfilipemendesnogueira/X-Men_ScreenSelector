@@ -29,6 +29,10 @@
     let currentSelectionStep = 1;
     let selectedCharacters = [];
     let selectedIndex = 0;
+    
+    let timer;
+    let isTimerRunning = false;
+    let currentTime = 1600;
 
     personagens.forEach((personagem) => {
         personagem.addEventListener('mouseenter', () => {
@@ -81,6 +85,10 @@
             selectedCharacters[currentSelectionStep - 1] = personagem;
 
             currentSelectionStep = (currentSelectionStep % 3) + 1;
+
+            //if (selectedCharacters.length === 3) {
+             //   currentTime = 1600; // Reset do timer quando time completo
+            //}
         });
     });
 
@@ -308,3 +316,59 @@
             personagem.dispatchEvent(new Event('click'));
         }
     }
+
+    // Função para iniciar o timer
+function startTimer() {
+    if (!isTimerRunning) {
+        isTimerRunning = true;
+        timer = setInterval(updateTimer, 10);
+    }
+}
+
+// Modifique a função resetSelecoes existente para:
+function resetSelecoes() {
+    selectedCharacters.forEach(char => {
+        if (char) {
+            char.classList.remove('escolhido');
+            char.classList.remove('selecionado');
+        }
+    });
+    selectedCharacters = [];
+    currentSelectionStep = 1;
+    
+    // Resetar todos os nomes
+    document.querySelectorAll('[id^="hero_name"]').forEach(el => {
+        el.textContent = '';
+    });
+    
+    // Resetar a seleção inicial
+    const primeiroPersonagem = document.querySelector('.characters');
+    if (primeiroPersonagem) {
+        primeiroPersonagem.classList.add('selecionado');
+        alterarImagemPersonagemSelecionado(primeiroPersonagem);
+        alterarNomePersonagemSelecionado(primeiroPersonagem);
+    }
+}
+
+// Inicie o timer quando o DOM estiver carregado
+window.addEventListener('DOMContentLoaded', () => {
+    startTimer();
+});
+
+// Função para atualizar o timer
+function updateTimer() {
+    if (currentTime > 0) {
+        currentTime--;
+        const seconds = Math.floor(currentTime / 100);
+        const tenths = currentTime % 100;
+        
+        document.querySelector('.main_time').textContent = seconds.toString().padStart(2, '0');
+        document.querySelector('.decimal_time').textContent = `${tenths.toString().padStart(2, '0')}`;
+    } else {
+        clearInterval(timer);
+        isTimerRunning = false;
+        resetSelecoes();
+        currentTime = 1600;
+    }
+    startTimer();
+}
