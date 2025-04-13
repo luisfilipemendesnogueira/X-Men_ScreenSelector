@@ -45,7 +45,7 @@
     /* Reduz os tamanhos dos containers e espaçamentos */
     .teams,
     .timer {
-      width: 80%;
+      width: 90%;
       padding: 5px 8px;
       border-width: 2px;
     }
@@ -96,7 +96,7 @@
     }
     
     .sides {
-      width: 70%;
+      width: 100%;
       height: auto;
       margin: 5px 0;
     }
