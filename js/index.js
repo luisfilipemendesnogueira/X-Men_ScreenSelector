@@ -16,7 +16,7 @@
 
 // Verifica se o acesso é permitido
 if (!sessionStorage.getItem('allowed')) {
-    window.location.href = 'index1.html';
+    window.location.href = 'index.html';
   } else {
     // Remove a flag para que um refresh redirecione
     sessionStorage.removeItem('allowed');
