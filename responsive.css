@@ -3,6 +3,7 @@
 /* Para telas até 1024px (tablets e pequenos laptops) */
 @media screen and (max-width: 1024px) {
     .body{
+        overflow-x: hidden;
         overflow-y: visible;
     }
     .select_screen {
@@ -38,6 +39,7 @@
   /* Para telas até 768px (tablets e dispositivos intermediários) */
   @media screen and (max-width: 768px) {
     .body{
+        overflow-x: hidden;
         overflow-y: visible;
     }
     /* Reduz os tamanhos dos containers e espaçamentos */
@@ -84,6 +86,7 @@
     /* Evita o travamento do fundo em mobile */
     body {
       background-attachment: scroll;
+      overflow-x: hidden;
       overflow-y: visible;
     }
     
@@ -146,6 +149,7 @@
     /* Evita o travamento do fundo em mobile */
     body {
       background-attachment: scroll;
+      overflow-x: hidden;
       overflow-y: visible;
     }
     

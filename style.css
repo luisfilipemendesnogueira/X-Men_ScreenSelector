@@ -33,7 +33,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
-    overflow: hidden;
+    overflow-x: hidden;
     overflow-y: visible;
 }
 
