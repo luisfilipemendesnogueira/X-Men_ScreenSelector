@@ -2,6 +2,9 @@
 
 /* Para telas até 1024px (tablets e pequenos laptops) */
 @media screen and (max-width: 1024px) {
+    .body{
+        overflow-y: visible;
+    }
     .select_screen {
       flex-direction: column;
       align-items: center;
@@ -34,6 +37,9 @@
   
   /* Para telas até 768px (tablets e dispositivos intermediários) */
   @media screen and (max-width: 768px) {
+    .body{
+        overflow-y: visible;
+    }
     /* Reduz os tamanhos dos containers e espaçamentos */
     .teams,
     .timer {
@@ -45,7 +51,7 @@
         width: 55%;
         height: auto;
         margin: 10px 0;
-      }
+    }
 
     .sides#right_side > :nth-child(odd) {
         justify-self: center; /* Alinha à direita */
@@ -78,6 +84,7 @@
     /* Evita o travamento do fundo em mobile */
     body {
       background-attachment: scroll;
+      overflow-y: visible;
     }
     
     /* Coloca as duas partes (left_side e right_side) em pilha */
@@ -101,13 +108,13 @@
       grid-auto-rows: auto;
       gap: 5px;
       padding: 0 5px;
-      width: 80%;
+      width: 110%;
     }
     
     /* Ajusta os containers dos times para ocupar toda a largura possível */
     .teams {
       width: 100%;
-      padding: 5px;
+      padding: 3px;
     }
 
     .sides#right_side > :nth-child(odd) {
@@ -130,12 +137,16 @@
     .main_text {
         font-size: 50%; 
     }
+    .time_text{
+        position: static;
+    }
   }
-  
+  /* Para telas pequenas até 350px */
   @media screen and (max-width: 350px) {
     /* Evita o travamento do fundo em mobile */
     body {
       background-attachment: scroll;
+      overflow-y: visible;
     }
     
     /* Coloca as duas partes (left_side e right_side) em pilha */
@@ -164,7 +175,7 @@
     /* Ajusta os containers dos times para ocupar toda a largura possível */
     .teams {
       width: 100%;
-      padding: 5px;
+      padding: 3px;
     }
 
     .sides#right_side > :nth-child(odd) {
