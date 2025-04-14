@@ -24,14 +24,39 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
       font-family: 'kof-2002-monospaced';
+      width: 15%;
     }
     .btn:hover {
       background-color: #ddd;
     }
+    h1{
+      color: white;
+    }
+    .box{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      gap: 10px;
+    }
+    h1{
+      font-size: 14px;
+    }
+    .redText{
+      background: radial-gradient(circle, rgba(255, 212, 0, 1) 51%,rgba(185, 153, 0, 1) 100%);
+      background-clip: text; 
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
   </style>
 </head>
 <body>
-  <button class="btn" id="start">START</button>
+  <div class="box">
+    <button class="btn" id="start">START</button>
+    <h1>Use as teclas <span class="redText">WASD</span> ou as <span class="redText">setas</span> do teclado para mover a selecao e use a tecla <span class="redText">ENTER</span> para selecionar os personagens</h1>
+    <h1>ou use o <span class="redText">mouse</span> para mover a selecao e clique com o <span class="redText">botao esquerdo</span> para selecionar os personagens</h1>
+  </div>
   <script>
     document.getElementById('start').addEventListener('click', function() {
       // O clique no botão é uma interação explícita do usuário,
