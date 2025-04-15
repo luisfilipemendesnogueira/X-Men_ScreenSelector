@@ -1,19 +1,3 @@
-/* 
-O que precisamos fazer? - quando passar o mouse em cima do personagem na lista temos que adicionar a borda azul de seleção na imagem pequena do personagem e mostrar a imagem, o nome e o texto grande do personagem que está selecionado
-
-    OBJETIVO 1 - quando passar o mouse em cima do personagem na listagem, devemos selecioná-lo
-        passo 1 - pegar os personagens no JS pra poder verificar quando o usuário passar o mouse em cima de um deles
-        
-        passo 2 - adicionar a classe selecionado no personagem que o usuário passar o cursor do mouse
-        
-        passo 3 - verificar se já exista um personagem selecionado, se sim, devemos remover a seleção dele 
-
-    OBJETIVO 2 - quando passar o mouse em cima do personagem na listagem, trocar a imagem, o nome e a descrição do personagem grande
-        passo 1 - pegar o elemento do personagem grande pra adicionar as informações nele
-        passo 2 - alterar a imagem do personagem grande
-        passo 3 - alterar o nome do personagem grande
-*/
-
 // Verifica se o acesso é permitido
 if (!sessionStorage.getItem('allowed')) {
     window.location.href = 'index.html';
@@ -23,19 +7,75 @@ if (!sessionStorage.getItem('allowed')) {
 }
 
 const personagens = document.querySelectorAll('.characters');
+
 const selectionSound = new Audio('./sounds/selection_sound.mp3');
 const confirmSound = new Audio('./sounds/confirm_sound.mp3');
 const titleSound = new Audio('./sounds/title.mp3');
 const announcerSound = new Audio('./sounds/pick_up.mp3');
 
-titleSound.loop = true;
+const keyToDirection = {
+    'ArrowUp': 'up',
+    'w': 'up',
+    'ArrowDown': 'down',
+    's': 'down',
+    'ArrowLeft': 'left',
+    'a': 'left',
+    'ArrowRight': 'right',
+    'd': 'right'
+};
+
+// Adicione no início do JS (após as variáveis existentes):
+const secretCharacters = {
+    'cyclops': {
+        secretImg: './images/cyclops_dark_phoenix.png',
+        cardImg: './images/card-cyclops_dark_phoenix.png',
+        secretName: 'Dark Phoenix'
+    },
+    'jean_grey': {
+        secretImg: './images/dark_phoenix.png',
+        cardImg: './images/card-dark_phoenix.png',
+        secretName: 'Dark Phoenix'
+    },
+    'emma_frost': {
+        secretImg: './images/emma_frost_dark_phoenix.png',
+        cardImg: './images/card-emma_frost_dark_phoenix.png',
+        secretName: 'Dark Phoenix'
+    },
+    'emma_frost': {
+        secretImg: './images/emma_frost_diamond.png',
+        cardImg: './images/card-emma_frost_diamond.png',
+        secretName: 'Diamond Form'
+    },
+    'magik': {
+        secretImg: './images/magik_dark_phoenix.png',
+        cardImg: './images/card-magik_dark_phoenix.png',
+        secretName: 'Dark Phoenix'
+    },
+    'colossus': {
+        secretImg: './images/colossus_dark_phoenix.png',
+        cardImg: './images/card-colossus_dark_phoenix.png',
+        secretName: 'Dark Phoenix'
+    },
+    'angel': {
+        secretImg: './images/archangel.png',
+        cardImg: './images/card-archangel.png',
+        secretName: 'Archangel'
+    },
+};
+
+const unlockedSecrets = new Set(); // Armazena quais segredos foram desbloqueados
 
 let currentSelectionStep = 1;
 let selectedCharacters = [];
 let selectedIndex = 0;
+
 let timer;
 let isTimerRunning = false;
-let currentTime = 1600;
+let currentTime = 3000;
+
+let inputSequence = [];
+
+titleSound.loop = true;
 
 personagens.forEach((personagem) => {
     personagem.addEventListener('mouseenter', () => {
@@ -89,9 +129,8 @@ personagens.forEach((personagem) => {
 
         currentSelectionStep = (currentSelectionStep % 3) + 1;
 
-        //if (selectedCharacters.length === 3) {
-        //   currentTime = 1600; // Reset do timer quando time completo
-        //}
+        alterarImagemPersonagemSelecionado(personagem);
+        alterarNomePersonagemSelecionado(personagem);
     });
 });
 
@@ -105,13 +144,21 @@ if (primeiroPersonagem) {
 
 function alterarNomePersonagemSelecionado(personagem) {
     const nomePersonagem = document.getElementById('hero_name');
-    nomePersonagem.innerText = personagem.getAttribute('data-name');
+    if (unlockedSecrets.has(personagem.id)) {
+        nomePersonagem.innerText = secretCharacters[personagem.id].secretName;
+    } else {
+        nomePersonagem.innerText = personagem.getAttribute('data-name');
+    }
 }
 
 function alterarImagemPersonagemSelecionado(personagem) {
     const idPersonagem = personagem.id;
     const imagemPersonagemGrande = document.getElementById('hero_pic');
-    imagemPersonagemGrande.src = `./images/card-${idPersonagem}.png`;
+    if (unlockedSecrets.has(idPersonagem)) {
+        imagemPersonagemGrande.src = secretCharacters[idPersonagem].cardImg;
+    } else {
+        imagemPersonagemGrande.src = `./images/card-${idPersonagem}.png`;
+    }
 }
 
 function removerSelecaoDoPersonagem() {
@@ -281,6 +328,7 @@ window.addEventListener('pageshow', () => {
 // Função para navegar entre personagens
 function navigateSelection(direction) {
     const totalCharacters = personagens.length;
+    const previousCharacter = personagens[selectedIndex]; // Guarda personagem atual antes da mudança
 
     // Calcula novo índice
     let newIndex = selectedIndex + direction;
@@ -289,6 +337,20 @@ function navigateSelection(direction) {
     newIndex = Math.max(0, Math.min(newIndex, totalCharacters - 1));
 
     if (newIndex !== selectedIndex) {
+        // Remove o segredo do personagem anterior se não foi selecionado
+        if (unlockedSecrets.has(previousCharacter.id) &&
+            !selectedCharacters.includes(previousCharacter)) {
+            unlockedSecrets.delete(previousCharacter.id);
+            const charImg = previousCharacter.querySelector('.char_img');
+            charImg.src = previousCharacter.dataset.originalImg;
+            previousCharacter.setAttribute('data-name', previousCharacter.dataset.originalName);
+            // Atualiza a exibição
+            if (previousCharacter.classList.contains('selecionado')) {
+                alterarImagemPersonagemSelecionado(previousCharacter);
+                alterarNomePersonagemSelecionado(previousCharacter);
+            }
+        }
+
         selectedIndex = newIndex;
         const personagem = personagens[selectedIndex];
 
@@ -322,6 +384,16 @@ document.addEventListener('keydown', (e) => {
     else if (currentKeyMap.hasOwnProperty(e.key)) {
         e.preventDefault();
         navigateSelection(currentKeyMap[e.key]);
+    }
+
+    // Registrar direção no inputSequence
+    const direction = keyToDirection[e.key];
+    if (direction) {
+        inputSequence.push(direction);
+        if (inputSequence.length > 8) {
+            inputSequence.shift();
+        }
+        checkSecretCode();
     }
 });
 
@@ -357,6 +429,14 @@ function resetSelecoes() {
         char.classList.remove('escolhido', 'selecionado');
     });
 
+    personagens.forEach(personagem => {
+        const charImg = personagem.querySelector('.char_img');
+        if (charImg && personagem.dataset.originalImg) {
+            charImg.src = personagem.dataset.originalImg;
+        }
+        personagem.setAttribute('data-name', personagem.dataset.originalName);
+    });
+
     selectedCharacters = [];
     currentSelectionStep = 1;
     selectedIndex = 0; // Resetar índice para o primeiro personagem
@@ -377,6 +457,14 @@ function resetSelecoes() {
 
     // Garantir scroll para visibilidade
     primeiroPersonagem.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+
+    // Reseta todos os segredos
+    unlockedSecrets.clear();
+    const currentCharacter = document.querySelector('.characters.selecionado');
+    if (currentCharacter) {
+        alterarImagemPersonagemSelecionado(currentCharacter);
+        alterarNomePersonagemSelecionado(currentCharacter);
+    }
 }
 
 // Inicie o timer quando o DOM estiver carregado
@@ -396,8 +484,58 @@ function updateTimer() {
     } else {
         clearInterval(timer);
         isTimerRunning = false;
+        unlockedSecrets.clear();
+        // Reseta imagens e nomes
+        personagens.forEach(personagem => {
+            const charImg = personagem.querySelector('.char_img');
+            charImg.src = personagem.dataset.originalImg;
+            personagem.setAttribute('data-name', personagem.dataset.originalName);
+        });
         resetSelecoes();
-        currentTime = 1600;
+        currentTime = 3000;
     }
     startTimer();
 }
+
+function checkSecretCode() {
+    const secretCode = ['up', 'down', 'right', 'left', 'down', 'up', 'left', 'right'];
+    if (arraysEqual(inputSequence, secretCode)) {
+        const currentCharacter = document.querySelector('.characters.selecionado');
+        if (currentCharacter && secretCharacters[currentCharacter.id]) {
+            unlockSecretCharacter(currentCharacter.id);
+            inputSequence = [];
+        }
+    }
+}
+
+function arraysEqual(a, b) {
+    return a.length === b.length && a.every((val, index) => val === b[index]);
+}
+
+function unlockSecretCharacter(characterId) {
+    unlockedSecrets.add(characterId);
+
+    const characterElement = document.getElementById(characterId);
+    const charImg = characterElement.querySelector('.char_img');
+
+    // Atualiza imagem do grid
+    if (secretCharacters[characterId]?.secretImg) {
+        charImg.src = secretCharacters[characterId].secretImg;
+        characterElement.setAttribute('data-name', secretCharacters[characterId].secretName); // Atualiza o data-name
+    }
+
+    // Atualiza imediatamente a exibição se o personagem estiver selecionado
+    const currentCharacter = document.querySelector('.characters.selecionado');
+    if (currentCharacter && currentCharacter.id === characterId) {
+        alterarImagemPersonagemSelecionado(currentCharacter);
+        alterarNomePersonagemSelecionado(currentCharacter);
+    }
+}
+
+personagens.forEach(personagem => {
+    const img = personagem.querySelector('.char_img');
+    if (img) {
+        personagem.dataset.originalImg = img.src;
+        personagem.dataset.originalName = personagem.getAttribute('data-name');
+    }
+});
