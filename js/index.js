@@ -193,6 +193,11 @@ const secretCharactersDefault = {
         cardImg: './images/card-archangel.png',
         secretName: 'Archangel'
     },
+    'brotherhood': {
+        secretImg: './images/five_phoenix.png',
+        cardImg: './images/card-five_phoenix.png',
+        secretName: 'Five Phoenix'
+    }
 };
 const secretCharactersAlternative = {
     'jean_grey': {
