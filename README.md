@@ -4,7 +4,7 @@ X-Men characters in the screen selector of KOF 2002.
 ## 🎮 Link
 https://luisfilipemendesnogueira.github.io/X-Men_ScreenSelector/
 
-## ⚠️ Secret Characters
+## ⚠️ Secret Characters (Only PC)
 ### • **Archangel (Angel)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
 ### • **Colossus Dark Phoenix (Colossus)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
 ### • **Cyclops Dark Phoenix (Cyclops)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
