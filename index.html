@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="responsive.css">
+  <link rel="shortcut icon" href="./images/x-logo.png" type="image/x-icon">
   <title>Tela Inicial</title>
   <style>
     body {
@@ -24,7 +26,6 @@
       border-radius: 5px;
       transition: background-color 0.3s ease;
       font-family: 'kof-2002-monospaced';
-      width: 15%;
     }
     .btn:hover {
       background-color: #ddd;
@@ -37,7 +38,7 @@
       flex-direction: column;
       text-align: center;
       align-items: center;
-      gap: 10px;
+      gap: 20px;
     }
     h1{
       font-size: 14px;
@@ -65,6 +66,17 @@
     });
   </script>
   <script>
+    const secondTitle = new Audio('./sounds/second_title.mp3');
+    document.addEventListener('DOMContentLoaded', () => {
+      secondTitle.play()
+    });
+
+    window.addEventListener('pageshow', () => {
+        if (secondTitle.paused) {
+          secondTitle.play();
+        }
+    });
+
     document.getElementById('start').addEventListener('click', function() {
       // Define a flag de acesso permitido
       sessionStorage.setItem('allowed', 'true');

@@ -28,13 +28,23 @@
 body {
     height: 100vh;
     font-family: var(--kof_font);
-    background-image: url(./images/bg.png);
+    background-image: url(./images/bg.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
     overflow-x: hidden;
     overflow-y: visible;
+    /* Adicione estas linhas: */
+    margin: 0;
+    padding: 0;
+    animation: bgAnimation 1s infinite; /* Opcional - ajuda em alguns casos de renderização */
+    }
+
+/* Opcional - para garantir que o GIF não pare */
+@keyframes bgAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 0; }
 }
 
 .select_screen {

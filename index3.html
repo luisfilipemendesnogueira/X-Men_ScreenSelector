@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tela Inicial</title>
+  <link rel="shortcut icon" href="./images/x-logo.png" type="image/x-icon">
+  <style>
+    @font-face {
+      font-family: 'kof-2002';
+      font-style: normal;
+      font-weight: 400;
+      src: url('./font/the-king-of-fighters-2002.ttf') format('truetype'),
+           url('./font/the-king-of-fighters-2002.otf') format('opentype');
+    }
+
+    @font-face {
+      font-family: 'kof-2002-monospaced';
+      font-style: normal;
+      font-weight: 400;
+      src: url('./font/kof-2002-medium.ttf') format('truetype'),
+           url('./font/kof-2002-medium.otf') format('opentype');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      font-family: 'kof-2002-monospaced';
+      color: white;
+    }
+
+    .bottom {
+      background-image: url(./images/bg3.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding-left: 80px;
+      padding-top: 10px;
+      padding-bottom: 30px;
+      font-size: 6vh;
+      gap: 20px;
+    }
+    
+    .top {
+      background-image: url(./images/bg2.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex: 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
+    }
+
+    .text2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .btn {
+      width: 30vh;
+      font-size: 5vh;
+      border: none;
+      cursor: pointer;
+      background-color: #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-family: 'kof-2002-monospaced';
+      padding-bottom: 5px;
+    }
+
+    .btn:hover {
+      background-color: #ddd;
+    }
+
+    .character-cards-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3vw;
+      height: 100%;
+      width: 100%;
+      padding: 0 30px;
+    }
+
+    .character-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+      max-width: 320px;
+    }
+
+    .character-card {
+      background-image: url(./images/hero_box.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: auto;
+      width: 100%;
+      max-height: 85%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .character-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .character-name {
+      margin-top: 15px;
+      font-size: 3vh;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      color: gold;
+      font-family: 'kof-2002';
+      padding: 5px 10px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      .character-cards-container {
+        gap: 2vw;
+      }
+      
+      .character-wrapper {
+        width: 30%;
+      }
+      
+      .character-name {
+        font-size: 2.5vh;
+        margin-top: 8px;
+      }
+      
+      .bottom {
+        font-size: 4vh;
+        padding-left: 20px;
+      }
+      
+      .btn {
+        width: 20vh;
+        font-size: 3vh;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .character-cards-container {
+        gap: 2vw;
+        flex-direction: column;
+      }
+      
+      .character-wrapper {
+        width: 30%;
+        flex-direction: row;
+      }
+      
+      .character-name {
+        font-size: 2.5vh;
+        margin-top: 8px;
+      }
+      
+      .bottom {
+        font-size: 4vh;
+        padding-left: 20px;
+      }
+      
+      .btn {
+        width: 20vh;
+        font-size: 3vh;
+      }
+    }
+    @media (max-width: 450px) {
+        .character-cards-container {
+            gap: 1.5vw;
+            flex-direction: column;
+        }
+        
+        .character-wrapper {
+            width: 50%;
+            margin-bottom: 10px;
+        }
+        
+        .character-name {
+            font-size: 1vh;
+            margin-top: 4px;
+        }
+        
+        .bottom {
+            font-size: 3vh;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: center;
+        }
+        
+        .text2 {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn {
+            width: 18vh;
+            font-size: 2.5vh;
+        }
+        
+        .top {
+            flex: 3;
+            padding: 10px 0;
+        }
+    }
+    @media (max-width: 350px) {
+        .character-cards-container {
+            gap: 1.5vw;
+            flex-direction: column;
+        }
+        
+        .character-wrapper {
+            width: 65%;
+            margin-bottom: 10px;
+        }
+        
+        .character-name {
+            font-size: 1vh;
+            margin-top: 4px;
+        }
+        
+        .bottom {
+            font-size: 3vh;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: center;
+        }
+        
+        .text2 {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn {
+            width: 18vh;
+            font-size: 2.5vh;
+        }
+        
+        .top {
+            flex: 3;
+            padding: 10px 0;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="character-cards-container">
+        <div class="character-wrapper">
+            <img src="" alt="Selected Character 1" class="character-card" id="card1">
+            <div class="character-name" id="name1">Character 1</div>
+        </div>
+        <div class="character-wrapper">
+            <img src="" alt="Selected Character 2" class="character-card" id="card2">
+            <div class="character-name" id="name2">Character 2</div>
+        </div>
+        <div class="character-wrapper">
+            <img src="" alt="Selected Character 3" class="character-card" id="card3">
+            <div class="character-name" id="name3">Character 3</div>
+        </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="text">Congratulations! your team saved the world</div>
+    <div class="text2">Come back anytime! <span class="btn_"><button class="btn" id="restart">RESTART</button></span></div>
+  </div>
+
+  <script>
+    const winnerSound = new Audio('./sounds/winner_sound.mp3');
+    const winnerAnnouncer = new Audio('./sounds/winner_announcer.mp3');
+    document.addEventListener('DOMContentLoaded', () => {
+        winnerSound.play()
+        .then(() => {
+            setTimeout(() => {
+                winnerAnnouncer.play().catch(error => {
+                    console.error("Erro no announcer:", error);
+                });
+            }, 500);
+        })
+        .catch(error => {
+            console.error("Erro ao reproduzir título:", error);
+        });
+    });
+
+    window.addEventListener('pageshow', () => {
+        if (winnerSound.paused) {
+            winnerSound.play();
+        }
+    });
+
+    document.getElementById('restart')?.addEventListener('click', function() {
+      sessionStorage.setItem('allowed', 'true');
+      window.location.href = 'index.html';
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+    const selectedCards = JSON.parse(localStorage.getItem('selectedCharacters')) || [];
+    
+    const elements = [
+        { card: document.getElementById('card2'), name: document.getElementById('name2') },
+        { card: document.getElementById('card1'), name: document.getElementById('name1') },
+        { card: document.getElementById('card3'), name: document.getElementById('name3') }
+    ];
+
+    selectedCards.forEach((character, index) => {
+        if (elements[index]) {
+            if (elements[index].card) elements[index].card.src = character.cardImg;
+            if (elements[index].name) elements[index].name.textContent = character.name;
+        }
+    });
+
+    elements.forEach(element => {
+        if (!element.card.src && element.card) {
+            element.card.src = './images/default-card.png';
+        }
+        if (!element.name.textContent && element.name) {
+            element.name.textContent = 'X-Member';
+        }
+    });
+});
+  </script>
+</body>
+</html>
