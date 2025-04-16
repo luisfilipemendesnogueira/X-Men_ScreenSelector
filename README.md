@@ -1,5 +1,5 @@
 # 🕹️ X-Men Screen Selector - The King of Fighters 2002
-X-Men characters in the Screen Selector of KOF 2002.
+X-Men characters in the screen selector of KOF 2002.
 
 ## 🎮 Link
 https://luisfilipemendesnogueira.github.io/X-Men_ScreenSelector/
