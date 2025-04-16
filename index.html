@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="shortcut icon" href="./images/x-logo.png" type="image/x-icon">
-  <title>Tela Inicial</title>
+  <title>Main Screen</title>
   <style>
     body {
       display: flex;
@@ -30,20 +29,18 @@
     .btn:hover {
       background-color: #ddd;
     }
-    h1{
-      color: white;
-    }
-    .box{
+    .box {
       display: flex;
       flex-direction: column;
       text-align: center;
       align-items: center;
       gap: 20px;
     }
-    h1{
+    h1 {
+      color: white;
       font-size: 14px;
     }
-    .redText{
+    .redText {
       background: radial-gradient(circle, rgba(255, 212, 0, 1) 51%,rgba(185, 153, 0, 1) 100%);
       background-clip: text; 
       -webkit-background-clip: text;
@@ -55,34 +52,19 @@
 <body>
   <div class="box">
     <button class="btn" id="start">START</button>
-    <h1>Use as teclas <span class="redText">WASD</span> ou as <span class="redText">setas</span> do teclado para mover a selecao e use a tecla <span class="redText">ENTER</span> para selecionar os personagens</h1>
-    <h1>ou use o <span class="redText">mouse</span> para mover a selecao e clique com o <span class="redText">botao esquerdo</span> para selecionar os personagens</h1>
+    <h1>Use the <span class="redText">WASD</span> keys or <span class="redText">arrows</span> to move the selection and press <span class="redText">ENTER</span> to select characters</h1>
+    <h1>or use the <span class="redText">mouse</span> to move and click the <span class="redText">left button</span> to select characters</h1>
   </div>
   <script>
-    document.getElementById('start').addEventListener('click', function() {
-      // O clique no botão é uma interação explícita do usuário,
-      // permitindo a reprodução automática de áudio na próxima página.
-      window.location.href = 'index2.html';
-    });
-  </script>
-  <script>
     const secondTitle = new Audio('./sounds/second_title.mp3');
-    document.addEventListener('DOMContentLoaded', () => {
-      secondTitle.play()
-    });
-
-    window.addEventListener('pageshow', () => {
-        if (secondTitle.paused) {
-          secondTitle.play();
-        }
-    });
-
-    document.getElementById('start').addEventListener('click', function() {
-      // Define a flag de acesso permitido
+    
+    document.addEventListener('DOMContentLoaded', () => secondTitle.play());
+    window.addEventListener('pageshow', () => secondTitle.paused && secondTitle.play());
+    
+    document.getElementById('start').addEventListener('click', () => {
       sessionStorage.setItem('allowed', 'true');
       window.location.href = 'index2.html';
     });
   </script>
 </body>
-
 </html>

@@ -1,17 +1,13 @@
 @font-face {
     font-family: 'kof-2002';
-    font-style: normal;
-    font-weight: 400;
     src: url('./font/the-king-of-fighters-2002.ttf') format('truetype'),
-        url('./font/the-king-of-fighters-2002.otf') format('opentype');
+          url('./font/the-king-of-fighters-2002.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'kof-2002-monospaced';
-    font-style: normal;
-    font-weight: 400;
     src: url('./font/kof-2002-medium.ttf') format('truetype'),
-        url('./font/kof-2002-medium.otf') format('opentype');
+          url('./font/kof-2002-medium.otf') format('opentype');
 }
 
 :root {
@@ -34,17 +30,6 @@ body {
     background-position: center center;
     background-attachment: fixed;
     overflow-x: hidden;
-    overflow-y: visible;
-    /* Adicione estas linhas: */
-    margin: 0;
-    padding: 0;
-    animation: bgAnimation 1s infinite; /* Opcional - ajuda em alguns casos de renderização */
-    }
-
-/* Opcional - para garantir que o GIF não pare */
-@keyframes bgAnimation {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 0; }
 }
 
 .select_screen {
@@ -54,17 +39,17 @@ body {
 .sides {
     width: 50%;
     height: 97vh;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0;
 }
 
 .sides#left_side {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(2, 1fr)/repeat(2, 1fr);
     margin-left: 10px;
     color: var(--kof_font_color);
 }
 
-.boxes{
+.boxes {
     display: flex;
     position: relative;
     overflow: hidden;
@@ -93,7 +78,6 @@ body {
     bottom: 2%;
     right: 0;
     z-index: 1;
-    object-fit: fill;
 }
 
 .villains_selection, .heroes_selection {
@@ -112,7 +96,6 @@ body {
     margin-left: 10px;
     gap: 1.5%;
 }
-
 
 .text {
     color: var(--kof_font_color);
@@ -137,19 +120,16 @@ body {
     font-size: 120%; 
 }
 
-/*------------------------------------------------------------------------------------------*/
-
 .sides#right_side {
     display: grid;
-    grid-template: repeat(7, 1fr) / repeat(2, 1fr);
+    grid-template: repeat(7, 1fr)/repeat(2, 1fr);
     gap: 10px;
     margin-right: 10px;
     justify-items: center;
-    width: 50%;
 }
 
 .sides#right_side > :nth-child(odd) {
-    justify-self: end; /* Alinha à direita */
+    justify-self: end;
 }
 
 .sides#right_side > :nth-child(even) {
@@ -157,11 +137,11 @@ body {
 }
 
 .sides#right_side > * {
-    width: 70%; /* Controla a largura dos itens dentro das colunas */
+    width: 70%;
 }
 
 .teams {
-    background: linear-gradient(to bottom, rgba(197, 0, 0, 1) 0%,rgba(155, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, #c50000 0%, #9b0000 100%);
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -172,16 +152,17 @@ body {
 }
 
 .characters {
-    background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%,rgba(255, 212, 0, 1) 100%);
+    background: radial-gradient(circle, #000000 0%, #ffd400 100%);
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
     border: 3px solid black;
+    position: relative;
+    overflow: visible !important;
 }
 
-.char_img{
+.char_img {
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -189,7 +170,7 @@ body {
 }
 
 .timer {
-    background: linear-gradient(to bottom, rgba(197, 0, 0, 1) 0%,rgba(155, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, #c50000 0%, #9b0000 100%);
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -208,12 +189,10 @@ body {
 }
 
 .time_text {
-    position: absolute;
-    background: radial-gradient(circle, rgba(255, 212, 0, 1) 51%,rgba(185, 153, 0, 1) 100%);
+    background: radial-gradient(circle, #ffd400 51%, #b99900 100%);
     background-clip: text; 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: transparent;
     font-family: 'kof-2002-monospaced';
 }
 
@@ -229,35 +208,26 @@ body {
     font-size: 2vw;
 }
 
-.characters {
-    position: relative; /* Necessário para posicionar a borda */
-    overflow: visible !important; /* Garante que a borda não seja cortada */
-}
-
-.characters.selecionado::before {
+.characters.selected::before {
     content: '';
     position: absolute;
-    top: -20px; /* Controla o tamanho externo */
+    top: -20px;
     left: -26px;
     right: -26px;
     bottom: -20px;
     background-image: url('./images/border.png');
     background-size: 100% 100%;
-    background-repeat: no-repeat;
     z-index: 1;
-    pointer-events: none;
 }
 
-.characters.escolhido {
+.characters.chosen {
     border: 3px solid #FFD700 !important;
     box-shadow: 0 0 20px #FFD700;
-    position: relative;
     z-index: 3;
     transform: scale(1.05);
     transition: all 0.3s ease;
 }
 
-.characters.selecionado {
-    /* Estilo existente para hover */
+.characters.selected {
     filter: brightness(1.2);
 }

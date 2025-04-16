@@ -1,7 +1,7 @@
 /* =======================================================
-   1. CONTROLE DE ACESSO
-   Verifica se o usuário tem permissão para acessar a página.
-   Redireciona para "index.html" se a flag não estiver definida.
+   1. ACCESS CONTROL
+   Checks if the user has permission to access the page.
+   Redirects to "index.html" if the flag is not defined.
 ========================================================== */
 if (!sessionStorage.getItem('allowed')) {
     window.location.href = 'index.html';
@@ -10,16 +10,16 @@ if (!sessionStorage.getItem('allowed')) {
 }
 
 /* =======================================================
-   2. ELEMENTOS DO DOM
-   Seleciona os elementos necessários para a manipulação da interface.
+   2. DOM ELEMENTS
+   Selects the necessary elements for interface manipulation.
 ========================================================== */
-const personagens = document.querySelectorAll('.characters');
-const nomePersonagem = document.getElementById('hero_name');
-const imagemPersonagemGrande = document.getElementById('hero_pic');
+const characters = document.querySelectorAll('.characters');
+const characterName = document.getElementById('hero_name');
+const largeCharacterImage = document.getElementById('hero_pic');
 
 /* =======================================================
-   3. CONFIGURAÇÃO DOS ÁUDIOS
-   Inicializa os sons usados no jogo e configura o looping do tema.
+   3. AUDIO CONFIGURATION
+   Initializes the sounds used in the game and configures the theme looping.
 ========================================================== */
 const selectionSound = new Audio('./sounds/selection_sound.mp3');
 const confirmSound = new Audio('./sounds/confirm_sound.mp3');
@@ -28,10 +28,10 @@ const announcerSound = new Audio('./sounds/pick_up.mp3');
 titleSound.loop = true;
 
 /* =======================================================
-   4. MAPEAMENTO DE TECLAS
-   Define associações entre as teclas e as direções ou valores numéricos.
+   4. KEY MAPPING
+   Defines associations between keys and directions or numerical values.
 ========================================================== */
-// Mapeamento para traduzir teclas em direções (usadas para input secreto)
+// Mapping to translate keys into directions (used for secret input)
 const keyToDirection = {
     'ArrowUp': 'up',
     'w': 'up',
@@ -43,7 +43,7 @@ const keyToDirection = {
     'd': 'right'
 };
 
-// Mapeamento padrão para navegação entre personagens
+// Default mapping for navigation between characters
 const defaultKeyMap = {
     'ArrowUp': -6,
     'ArrowDown': 6,
@@ -54,7 +54,7 @@ const defaultKeyMap = {
     'a': -1,
     'd': 1
 };
-// Mapeamentos especiais para personagens ou equipes específicas
+// Special mappings for specific characters or teams
 const specialKeyMaps = {
     'cyclops': {
         'ArrowUp': 33,
@@ -159,8 +159,8 @@ const specialKeyMaps = {
 };
 
 /* =======================================================
-   5. CONFIGURAÇÃO DOS PERSONAGENS SECRETOS
-   Define os personagens secretos padrão e alternativos, com suas imagens e nomes.
+   5. SECRET CHARACTERS CONFIGURATION
+   Defines the default and alternative secret characters, with their images and names.
 ========================================================== */
 const secretCharactersDefault = {
     'cyclops': {
@@ -194,7 +194,7 @@ const secretCharactersDefault = {
         secretName: 'Archangel'
     },
 };
-const secretCharactersAlternate = {
+const secretCharactersAlternative = {
     'jean_grey': {
         secretImg: './images/white_phoenix.png',
         cardImg: './images/card-white_phoenix.png',
@@ -208,108 +208,93 @@ const secretCharactersAlternate = {
 };
 
 /* =======================================================
-   6. VARIÁVEIS DE ESTADO DO JOGO
-   Gerenciam o progresso da seleção, timer e sequências de input.
+   6. GAME STATE VARIABLES
+   Manage selection progress, timer, and input sequences.
 ========================================================== */
-// Progresso da Seleção
+// Selection Progress
 let currentSelectionStep = 1;
 let selectedCharacters = [];
 let selectedIndex = 0;
 let currentKeyMap = defaultKeyMap;
 const unlockedSecretsDefault = new Set();
-const unlockedSecretsAlternate = new Set();
+const unlockedSecretsAlternative = new Set();
 
 // Timer
 let timer;
 let isTimerRunning = false;
 let currentTime = 3000;
 
-// Sequências de input
+// Input Sequences
 let inputSequenceDefault = [];
-let inputSequenceAlternate = [];
+let inputSequenceAlternative = [];
 
 /* =======================================================
-   7. EVENTOS DOS PERSONAGENS (MOUSE)
-   Permite a seleção e realce visual dos personagens ao passar o mouse ou clicar.
+   7. CHARACTER EVENTS (MOUSE)
+   Allows selection and visual highlighting of characters when hovering or clicking.
 ========================================================== */
-personagens.forEach((personagem) => {
-    personagem.addEventListener('mouseenter', () => {
-        // Se já estiver selecionado, não faz nada
-        if (personagem.classList.contains('selecionado')) return;
+characters.forEach((character) => {
+    character.addEventListener('mouseenter', () => {
+        if (character.classList.contains('selected')) return;
 
-        // Em telas menores, garante que a rolagem esteja no topo
         if (window.innerWidth < 450) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Atualiza a seleção visual e a imagem/nome exibido
-        removerSelecaoDoPersonagem();
-        personagem.classList.add('selecionado');
-        
-        // Verifica se o secret alternate está desbloqueado; se sim, usa as funções alternate
-        if (unlockedSecretsAlternate.has(personagem.id)) {
-            alterarImagemPersonagemSelecionadoAlternate(personagem);
-            alterarNomePersonagemSelecionadoAlternate(personagem);
+        removeCharacterSelection();
+        character.classList.add('selected');
+    
+        if (unlockedSecretsAlternative.has(character.id)) {
+            changeSelectedCharacterImageAlternative(character);
+            changeSelectedCharacterNameAlternative(character);
         } else {
-            alterarImagemPersonagemSelecionadoDefault(personagem);
-            alterarNomePersonagemSelecionadoDefault(personagem);
+            changeSelectedCharacterImageDefault(character);
+            changeSelectedCharacterNameDefault(character);
         }
 
         selectionSound.currentTime = 0;
         selectionSound.play();
 
-        // Atualiza o índice do personagem selecionado e mapeia teclas especiais se necessário
-        selectedIndex = Array.from(personagens).indexOf(personagem);
-        atualizarKeyMap(personagem);
+        selectedIndex = Array.from(characters).indexOf(character);
+        updateKeyMap(character);
     });
 });
 
-personagens.forEach((personagem) => {
-    personagem.addEventListener('click', () => {
-        // Impede seleção duplicada
-        if (selectedCharacters.includes(personagem)) return;
+characters.forEach((character) => {
+    character.addEventListener('click', () => {
+        if (selectedCharacters.includes(character)) return;
 
-        selectedIndex = Array.from(personagens).indexOf(personagem);
+        selectedIndex = Array.from(characters).indexOf(character);
 
-        // Remove a seleção anterior do mesmo slot, se houver
         if (selectedCharacters[currentSelectionStep - 1]) {
-            selectedCharacters[currentSelectionStep - 1].classList.remove('escolhido');
+            selectedCharacters[currentSelectionStep - 1].classList.remove('chosen');
         }
 
-        // Atualiza o nome do slot selecionado na interface
         const slotElement = document.getElementById(`hero_name${currentSelectionStep}`);
-        slotElement.textContent = personagem.getAttribute('data-name');
+        slotElement.textContent = character.getAttribute('data-name');
 
         confirmSound.currentTime = 0;
         confirmSound.play();
 
-        // Adiciona o estilo para indicar a seleção
-        personagem.classList.add('escolhido');
+        character.classList.add('chosen');
+        
+        selectedCharacters[currentSelectionStep - 1] = character;
 
-        // Armazena a referência do personagem selecionado
-        selectedCharacters[currentSelectionStep - 1] = personagem;
-
-        // Avança para o próximo slot (1 a 3 ciclicamente)
         currentSelectionStep = (currentSelectionStep % 3) + 1;
 
         if (selectedCharacters.length === 3) {
-            // Store selected characters data
             const selectedCards = selectedCharacters.map(char => {
-                // Verifica primeiro o segredo alternate (prioridade maior)
-                if (unlockedSecretsAlternate.has(char.id)) {
+                if (unlockedSecretsAlternative.has(char.id)) {
                     return {
-                        cardImg: secretCharactersAlternate[char.id].cardImg,
-                        name: secretCharactersAlternate[char.id].secretName
+                        cardImg: secretCharactersAlternative[char.id].cardImg,
+                        name: secretCharactersAlternative[char.id].secretName
                     };
                 }
-                // Verifica o segredo default
                 else if (unlockedSecretsDefault.has(char.id)) {
                     return {
                         cardImg: secretCharactersDefault[char.id].cardImg,
                         name: secretCharactersDefault[char.id].secretName
                     };
                 }
-                // Caso normal
                 return {
                     cardImg: `./images/card-${char.id}.png`,
                     name: char.getAttribute('data-name')
@@ -320,137 +305,132 @@ personagens.forEach((personagem) => {
             window.location.href = 'index3.html';
         }
 
-        // Verifica se o secret alternate está desbloqueado antes de atualizar a imagem e o nome
-        if (unlockedSecretsAlternate.has(personagem.id)) {
-            alterarImagemPersonagemSelecionadoAlternate(personagem);
-            alterarNomePersonagemSelecionadoAlternate(personagem);
+        if (unlockedSecretsAlternative.has(character.id)) {
+            changeSelectedCharacterImageAlternative(character);
+            changeSelectedCharacterNameAlternative(character);
         } else {
-            alterarImagemPersonagemSelecionadoDefault(personagem);
-            alterarNomePersonagemSelecionadoDefault(personagem);
+            changeSelectedCharacterImageDefault(character);
+            changeSelectedCharacterNameDefault(character);
         }
     });
 });
 
-// Seleciona inicialmente o primeiro personagem se existir
-const primeiroPersonagem = document.querySelectorAll('.characters')[0];
-if (primeiroPersonagem) {
-    removerSelecaoDoPersonagem();
-    primeiroPersonagem.classList.add('selecionado');
-    alterarImagemPersonagemSelecionadoDefault(primeiroPersonagem);
-    alterarNomePersonagemSelecionadoDefault(primeiroPersonagem);
+const firstCharacter = document.querySelectorAll('.characters')[0];
+if (firstCharacter) {
+    removeCharacterSelection();
+    firstCharacter.classList.add('selected');
+    changeSelectedCharacterImageDefault(firstCharacter);
+    changeSelectedCharacterNameDefault(firstCharacter);
 }
 
 /* =======================================================
-   8. FUNÇÕES DE ATUALIZAÇÃO DE INTERFACE
-   Atualiza a imagem e o nome do personagem selecionado (modo padrão ou alternativo).
+   8. INTERFACE UPDATE FUNCTIONS
+   Updates the image and name of the selected character (default or alternative mode).
 ========================================================== */
-function alterarNomePersonagemSelecionadoDefault(personagem) {
-    if (unlockedSecretsDefault.has(personagem.id)) {
-        nomePersonagem.innerText = secretCharactersDefault[personagem.id].secretName;
+function changeSelectedCharacterNameDefault(character) {
+    if (unlockedSecretsDefault.has(character.id)) {
+        characterName.innerText = secretCharactersDefault[character.id].secretName;
     } else {
-        nomePersonagem.innerText = personagem.getAttribute('data-name');
+        characterName.innerText = character.getAttribute('data-name');
     }
 }
 
-function alterarImagemPersonagemSelecionadoDefault(personagem) {
-    const idPersonagem = personagem.id;
-    if (unlockedSecretsDefault.has(idPersonagem)) {
-        imagemPersonagemGrande.src = secretCharactersDefault[idPersonagem].cardImg;
+function changeSelectedCharacterImageDefault(character) {
+    const characterId = character.id;
+    if (unlockedSecretsDefault.has(characterId)) {
+        largeCharacterImage.src = secretCharactersDefault[characterId].cardImg;
     } else {
-        imagemPersonagemGrande.src = `./images/card-${idPersonagem}.png`;
+        largeCharacterImage.src = `./images/card-${characterId}.png`;
     }
 }
 
-function alterarNomePersonagemSelecionadoAlternate(personagem) {
-    if (unlockedSecretsAlternate.has(personagem.id)) {
-        nomePersonagem.innerText = secretCharactersAlternate[personagem.id].secretName;
+function changeSelectedCharacterNameAlternative(character) {
+    if (unlockedSecretsAlternative.has(character.id)) {
+        characterName.innerText = secretCharactersAlternative[character.id].secretName;
     } else {
-        nomePersonagem.innerText = personagem.getAttribute('data-name');
+        characterName.innerText = character.getAttribute('data-name');
     }
 }
 
-function alterarImagemPersonagemSelecionadoAlternate(personagem){
-    const idPersonagem = personagem.id;
-    if (unlockedSecretsAlternate.has(idPersonagem)) {
-        imagemPersonagemGrande.src = secretCharactersAlternate[idPersonagem].cardImg;
+function changeSelectedCharacterImageAlternative(character){
+    const characterId = character.id;
+    if (unlockedSecretsAlternative.has(characterId)) {
+        largeCharacterImage.src = secretCharactersAlternative[characterId].cardImg;
     } else {
-        imagemPersonagemGrande.src = `./images/card-${idPersonagem}.png`;
+        largeCharacterImage.src = `./images/card-${characterId}.png`;
     }
 }
 
 /* =======================================================
-   9. FUNÇÕES DE RESETA E ATUALIZAÇÃO DE SELEÇÕES
-   Gerencia a remoção das classes de seleção e o reset dos personagens.
+   9. SELECTION RESET AND UPDATE FUNCTIONS
+   Manages the removal of selection classes and character reset.
 ========================================================== */
-function removerSelecaoDoPersonagem() {
-    document.querySelectorAll('.characters.selecionado').forEach(el => {
-        el.classList.remove('selecionado');
+function removeCharacterSelection() {
+    document.querySelectorAll('.characters.selected').forEach(el => {
+        el.classList.remove('selected');
     });
 }
 
-function resetarSelecoes() {
+function resetSelections() {
     selectedCharacters.forEach(char => {
-        if (char) char.classList.remove('escolhido');
+        if (char) char.classList.remove('chosen');
     });
     selectedCharacters = [];
     currentSelectionStep = 1;
     document.querySelectorAll('[id^="hero_name"]').forEach(el => el.textContent = '');
 }
 
-function resetSelecoes() {
-    // Remove classes de seleção e restaura as imagens e nomes originais
+function resetAllSelections() {
     document.querySelectorAll('.characters').forEach(char => {
-        char.classList.remove('escolhido', 'selecionado');
+        char.classList.remove('chosen', 'selected');
     });
 
-    personagens.forEach(personagem => {
-        const charImg = personagem.querySelector('.char_img');
-        if (charImg && personagem.dataset.originalImg) {
-            charImg.src = personagem.dataset.originalImg;
+    characters.forEach(character => {
+        const charImg = character.querySelector('.char_img');
+        if (charImg && character.dataset.originalImg) {
+            charImg.src = character.dataset.originalImg;
         }
-        personagem.setAttribute('data-name', personagem.dataset.originalName);
+        character.setAttribute('data-name', character.dataset.originalName);
     });
 
     selectedCharacters = [];
     currentSelectionStep = 1;
     selectedIndex = 0;
 
-    // Limpa os nomes exibidos em cada slot
     document.querySelectorAll('[id^="hero_name"]').forEach(el => {
         el.textContent = '';
     });
 
-    // Re-seleciona o primeiro personagem
-    const primeiroPersonagem = personagens[0];
-    if (primeiroPersonagem) {
-        primeiroPersonagem.classList.add('selecionado');
-        alterarImagemPersonagemSelecionadoDefault(primeiroPersonagem);
-        alterarNomePersonagemSelecionadoDefault(primeiroPersonagem);
-        atualizarKeyMap(primeiroPersonagem);
+    const firstCharacter = characters[0];
+    if (firstCharacter) {
+        firstCharacter.classList.add('selected');
+        changeSelectedCharacterImageDefault(firstCharacter);
+        changeSelectedCharacterNameDefault(firstCharacter);
+        updateKeyMap(firstCharacter);
     }
 
-    primeiroPersonagem.scrollIntoView({ behavior: 'auto', block: 'nearest' });
+    firstCharacter.scrollIntoView({ behavior: 'auto', block: 'nearest' });
     unlockedSecretsDefault.clear();
 
-    const currentCharacter = document.querySelector('.characters.selecionado');
+    const currentCharacter = document.querySelector('.characters.selected');
     if (currentCharacter) {
-        alterarImagemPersonagemSelecionadoDefault(currentCharacter);
-        alterarNomePersonagemSelecionadoDefault(currentCharacter);
+        changeSelectedCharacterImageDefault(currentCharacter);
+        changeSelectedCharacterNameDefault(currentCharacter);
     }
 }
 
-function atualizarKeyMap(personagem) {
-    if (specialKeyMaps[personagem.id]) {
-        currentKeyMap = specialKeyMaps[personagem.id];
+function updateKeyMap(character) {
+    if (specialKeyMaps[character.id]) {
+        currentKeyMap = specialKeyMaps[character.id];
     } else {
-        const team = personagem.closest('.teams')?.id;
+        const team = character.closest('.teams')?.id;
         currentKeyMap = specialKeyMaps[team] || defaultKeyMap;
     }
 }
 
 /* =======================================================
-   10. FUNÇÕES DE TIMER
-   Controla a contagem regressiva e reinicia as seleções ao término do tempo.
+   10. TIMER FUNCTIONS
+   Controls the countdown and resets selections when time runs out.
 ========================================================== */
 function startTimer() {
     if (!isTimerRunning) {
@@ -471,78 +451,75 @@ function updateTimer() {
         clearInterval(timer);
         isTimerRunning = false;
         unlockedSecretsDefault.clear();
-        unlockedSecretsAlternate.clear();
+        unlockedSecretsAlternative.clear();
         
-        // Restaura as imagens e nomes dos personagens
-        personagens.forEach(personagem => {
-            const charImg = personagem.querySelector('.char_img');
-            charImg.src = personagem.dataset.originalImg;
-            personagem.setAttribute('data-name', personagem.dataset.originalName);
+        characters.forEach(character => {
+            const charImg = character.querySelector('.char_img');
+            charImg.src = character.dataset.originalImg;
+            character.setAttribute('data-name', character.dataset.originalName);
         });
-        resetSelecoes();
+        resetAllSelections();
         currentTime = 3000;
     }
     startTimer();
 }
 
 /* =======================================================
-   11. FUNÇÕES DE NAVEGAÇÃO (TECLADO)
-   Permite mover a seleção entre os personagens usando o teclado.
+   11. NAVIGATION FUNCTIONS (KEYBOARD)
+   Allows moving the selection between characters using the keyboard.
 ========================================================== */
 function navigateSelection(direction) {
-    const totalCharacters = personagens.length;
-    const previousCharacter = personagens[selectedIndex];
+    const totalCharacters = characters.length;
+    const previousCharacter = characters[selectedIndex];
     let newIndex = selectedIndex + direction;
     newIndex = Math.max(0, Math.min(newIndex, totalCharacters - 1));
 
     if (newIndex !== selectedIndex) {
-        // Se o personagem anterior tiver um segredo desbloqueado e não tiver sido selecionado, restaura os valores originais
         if (unlockedSecretsDefault.has(previousCharacter.id) && !selectedCharacters.includes(previousCharacter)) {
             unlockedSecretsDefault.delete(previousCharacter.id);
             const charImg = previousCharacter.querySelector('.char_img');
             charImg.src = previousCharacter.dataset.originalImg;
             previousCharacter.setAttribute('data-name', previousCharacter.dataset.originalName);
-            if (previousCharacter.classList.contains('selecionado')) {
-                alterarImagemPersonagemSelecionadoDefault(previousCharacter);
-                alterarNomePersonagemSelecionadoDefault(previousCharacter);
+            if (previousCharacter.classList.contains('selected')) {
+                changeSelectedCharacterImageDefault(previousCharacter);
+                changeSelectedCharacterNameDefault(previousCharacter);
             }
         }
-        if (unlockedSecretsAlternate.has(previousCharacter.id) && !selectedCharacters.includes(previousCharacter)) {
-            unlockedSecretsAlternate.delete(previousCharacter.id);
+        if (unlockedSecretsAlternative.has(previousCharacter.id) && !selectedCharacters.includes(previousCharacter)) {
+            unlockedSecretsAlternative.delete(previousCharacter.id);
             const charImg = previousCharacter.querySelector('.char_img');
             charImg.src = previousCharacter.dataset.originalImg;
             previousCharacter.setAttribute('data-name', previousCharacter.dataset.originalName);
-            if (previousCharacter.classList.contains('selecionado')) {
-                alterarImagemPersonagemSelecionadoAlternate(previousCharacter);
-                alterarNomePersonagemSelecionadoAlternate(previousCharacter);
+            if (previousCharacter.classList.contains('selected')) {
+                changeSelectedCharacterImageAlternative(previousCharacter);
+                changeSelectedCharacterNameAlternative(previousCharacter);
             }
         }
 
         selectedIndex = newIndex;
-        const personagem = personagens[selectedIndex];
+        const character = characters[selectedIndex];
 
-        removerSelecaoDoPersonagem();
-        personagem.classList.add('selecionado');
-        // Usa a versão alternate se o personagem tiver o secret alternate desbloqueado
-        if (unlockedSecretsAlternate.has(personagem.id)) {
-            alterarImagemPersonagemSelecionadoAlternate(personagem);
-            alterarNomePersonagemSelecionadoAlternate(personagem);
+        removeCharacterSelection();
+        character.classList.add('selected');
+        if (unlockedSecretsAlternative.has(character.id)) {
+            changeSelectedCharacterImageAlternative(character);
+            changeSelectedCharacterNameAlternative(character);
         } else {
-            alterarImagemPersonagemSelecionadoDefault(personagem);
-            alterarNomePersonagemSelecionadoDefault(personagem);
+            changeSelectedCharacterImageDefault(character);
+            changeSelectedCharacterNameDefault(character);
         }
-        atualizarKeyMap(personagem);
+        updateKeyMap(character);
 
         selectionSound.currentTime = 0;
         selectionSound.play();
 
-        personagem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        character.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 }
 
 /* =======================================================
-   12. FUNÇÕES DE INPUT SECRETO
-   Verifica se o usuário inseriu a sequência correta de direções para desbloquear segredos.
+   12. SECRET INPUT FUNCTIONS
+   Checks if the user has entered the correct sequence of directions to unlock secrets.
 ========================================================== */
 function arraysEqual(a, b) {
     return a.length === b.length && a.every((val, index) => val === b[index]);
@@ -551,20 +528,20 @@ function arraysEqual(a, b) {
 function checkSecretCodeDefault() {
     const secretCodeDefault = ['up', 'down', 'right', 'left', 'down', 'up', 'left', 'right'];
     if (arraysEqual(inputSequenceDefault, secretCodeDefault)) {
-        const currentCharacter = document.querySelector('.characters.selecionado');
+        const currentCharacter = document.querySelector('.characters.selected');
         if (currentCharacter && secretCharactersDefault[currentCharacter.id]) {
             unlockSecretCharacterDefault(currentCharacter.id);
             inputSequenceDefault = [];
         }
     }
 }
-function checkSecretCodeAlternate() {
-    const secretCodeAlternate = ['up', 'down', 'left', 'right', 'down', 'up', 'right', 'left'];
-    if (arraysEqual(inputSequenceAlternate, secretCodeAlternate)) {
-        const currentCharacter = document.querySelector('.characters.selecionado');
-        if (currentCharacter && secretCharactersAlternate[currentCharacter.id]) {
-            unlockSecretCharacterAlternate(currentCharacter.id);
-            inputSequenceAlternate = [];
+function checkSecretCodeAlternative() {
+    const secretCodeAlternative = ['up', 'down', 'left', 'right', 'down', 'up', 'right', 'left'];
+    if (arraysEqual(inputSequenceAlternative, secretCodeAlternative)) {
+        const currentCharacter = document.querySelector('.characters.selected');
+        if (currentCharacter && secretCharactersAlternative[currentCharacter.id]) {
+            unlockSecretCharacterAlternative(currentCharacter.id);
+            inputSequenceAlternative = [];
         }
     }
 }
@@ -579,42 +556,42 @@ function unlockSecretCharacterDefault(characterId) {
         characterElement.setAttribute('data-name', secretCharactersDefault[characterId].secretName); 
     }
 
-    const currentCharacter = document.querySelector('.characters.selecionado');
+    const currentCharacter = document.querySelector('.characters.selected');
     if (currentCharacter && currentCharacter.id === characterId) {
-        alterarImagemPersonagemSelecionadoDefault(currentCharacter);
-        alterarNomePersonagemSelecionadoDefault(currentCharacter);
+        changeSelectedCharacterImageDefault(currentCharacter);
+        changeSelectedCharacterNameDefault(currentCharacter);
     }
 }
 
-function unlockSecretCharacterAlternate(characterId) {
-    unlockedSecretsAlternate.add(characterId);
+function unlockSecretCharacterAlternative(characterId) {
+    unlockedSecretsAlternative.add(characterId);
     const characterElement = document.getElementById(characterId);
     const charImg = characterElement.querySelector('.char_img');
 
-    if (secretCharactersAlternate[characterId]?.secretImg) {
-        charImg.src = secretCharactersAlternate[characterId].secretImg;
-        characterElement.setAttribute('data-name', secretCharactersAlternate[characterId].secretName);
+    if (secretCharactersAlternative[characterId]?.secretImg) {
+        charImg.src = secretCharactersAlternative[characterId].secretImg;
+        characterElement.setAttribute('data-name', secretCharactersAlternative[characterId].secretName);
     }
 
-    const currentCharacter = document.querySelector('.characters.selecionado');
+    const currentCharacter = document.querySelector('.characters.selected');
     if (currentCharacter && currentCharacter.id === characterId) {
-        alterarImagemPersonagemSelecionadoAlternate(currentCharacter);
-        alterarNomePersonagemSelecionadoAlternate(currentCharacter);
+        changeSelectedCharacterImageAlternative(currentCharacter);
+        changeSelectedCharacterNameAlternative(currentCharacter);
     }
 }
 
 /* =======================================================
-   13. EVENTOS GLOBAIS (TECLADO E PÁGINA)
-   Configura os eventos de teclado para navegação e input secreto, além dos eventos de carregamento da página.
+   13. GLOBAL EVENTS (KEYBOARD AND PAGE)
+   Sets up keyboard events for navigation and secret input, as well as page loading events.
 ========================================================== */
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') { 
         e.preventDefault();
-        const personagemSelecionado = personagens[selectedIndex];
-        if (!selectedCharacters.includes(personagemSelecionado)) {
-            personagemSelecionado.click();
+        const selectedCharacter = characters[selectedIndex];
+        if (!selectedCharacters.includes(selectedCharacter)) {
+            selectedCharacter.click();
         }
-        personagemSelecionado.click();
+        selectedCharacter.click();
     }
     else if (currentKeyMap.hasOwnProperty(e.key)) {
         e.preventDefault();
@@ -630,11 +607,11 @@ document.addEventListener('keydown', (e) => {
         checkSecretCodeDefault();
     }
     if (direction) {
-        inputSequenceAlternate.push(direction);
-        if (inputSequenceAlternate.length > 8) {
-            inputSequenceAlternate.shift();
+        inputSequenceAlternative.push(direction);
+        if (inputSequenceAlternative.length > 8) {
+            inputSequenceAlternative.shift();
         }
-        checkSecretCodeAlternate();
+        checkSecretCodeAlternative();
     }
 });
 
@@ -659,33 +636,33 @@ window.addEventListener('pageshow', () => {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-    if (personagens.length > 0) {
-        personagens[0].classList.add('selecionado');
-        alterarImagemPersonagemSelecionadoDefault(personagens[0]);
-        alterarNomePersonagemSelecionadoDefault(personagens[0]);
-        atualizarKeyMap(personagens[0]);
+    if (characters.length > 0) {
+        characters[0].classList.add('selected');
+        changeSelectedCharacterImageDefault(characters[0]);
+        changeSelectedCharacterNameDefault(characters[0]);
+        updateKeyMap(characters[0]);
     }
 });
 
 function handleKeyboardSelection() {
-    const personagem = personagens[selectedIndex];
-    if (personagem) {
-        personagem.dispatchEvent(new Event('click'));
+    const character = characters[selectedIndex];
+    if (character) {
+        character.dispatchEvent(new Event('click'));
     }
 }
 
 /* =======================================================
-   14. INICIALIZAÇÃO FINAL
-   Inicia o timer e armazena as imagens e nomes originais para restauração futura.
+   14. FINAL INITIALIZATION
+   Starts the timer and stores the original images and names for future restoration.
 ========================================================== */
 window.addEventListener('DOMContentLoaded', () => {
     startTimer();
 });
 
-personagens.forEach(personagem => {
-    const img = personagem.querySelector('.char_img');
+characters.forEach(character => {
+    const img = character.querySelector('.char_img');
     if (img) {
-        personagem.dataset.originalImg = img.src;
-        personagem.dataset.originalName = personagem.getAttribute('data-name');
+        character.dataset.originalImg = img.src;
+        character.dataset.originalName = character.getAttribute('data-name');
     }
 });

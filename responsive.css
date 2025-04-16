@@ -1,206 +1,95 @@
-/* responsive.css */
-
-/* Para telas até 1024px (tablets e pequenos laptops) */
 @media screen and (max-width: 1024px) {
-    body{
-        overflow-x: hidden;
-        overflow-y: visible;
-    }
     .select_screen {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
     .sides {
-      width: 45%;
-      height: auto;
-      margin: 10px 0;
+        width: 45%;
+        height: auto;
     }
-    /* Ajusta o lado esquerdo e direito */
     .sides#left_side {
-      margin-left: 0;
-      grid-template: repeat(2, auto) / repeat(2, 1fr);
+        margin-left: 0;
+        grid-template: repeat(2, auto)/repeat(2, 1fr);
     }
     .sides#right_side {
-      margin-right: 0;
-      /* Mantenha o grid, mas com largura total */
-      width: 80%;
-      padding: 0 10px;
-      gap: 10px;
+        margin-right: 0;
+        width: 80%;
+        padding: 0 10px;
+        gap: 10px;
     }
-    .text{
+    .text {
         font-size: 50%;
         padding-top: 1vh;
     }
     .main_text {
         font-size: 100%; 
     }
-  }
-  
-  /* Para telas até 768px (tablets e dispositivos intermediários) */
-  @media screen and (max-width: 768px) {
-    body{
-        overflow-x: hidden;
-        overflow-y: visible;
-    }
-    /* Reduz os tamanhos dos containers e espaçamentos */
-    .teams,
-    .timer {
-      width: 90%;
-      padding: 5px 8px;
-      border-width: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    .teams, .timer {
+        width: 90%;
+        padding: 5px 8px;
+        border-width: 2px;
     }
     .sides {
         width: 55%;
-        height: auto;
-        margin: 10px 0;
     }
-
-    .sides#right_side > :nth-child(odd) {
-        justify-self: center; /* Alinha à direita */
-    }
-    
+    .sides#right_side > :nth-child(odd), 
     .sides#right_side > :nth-child(even) {
         justify-self: center;
     }
-
     .sides#right_side {
-      /* Altera o grid para melhor aproveitamento de espaço */
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: auto;
-      gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 8px;
     }
     .char_img {
-      /* Ajuste sutil na sombra e arredondamento, se necessário */
-      filter: drop-shadow(3px 3px 1px #00000059);
+        filter: drop-shadow(3px 3px 1px #00000059);
     }
     .main_time {
-      font-size: 4vw;
+        font-size: 4vw;
     }
     .decimal_time {
-      font-size: 3vw;
+        font-size: 3vw;
     }
-  }
-  
-  /* Para telas pequenas até 450px (smartphones) */
-  @media screen and (max-width: 450px) {
-    /* Evita o travamento do fundo em mobile */
+}
+
+@media screen and (max-width: 450px) {
     body {
-      background-attachment: scroll;
-      overflow-x: hidden;
-      overflow-y: visible;
+        background-attachment: scroll;
     }
-    
-    /* Coloca as duas partes (left_side e right_side) em pilha */
-    .select_screen {
-      flex-direction: column;
-    }
-    
     .sides {
-      width: 100%;
-      height: auto;
-      margin: 5px 0;
+        width: 100%;
+        margin: 5px 0;
     }
-    
-    .sides#left_side {
-      grid-template: repeat(2, auto) / repeat(2, 1fr);
-    }
-    
     .sides#right_side {
-      /* Reorganiza o grid para facilitar a visualização dos personagens */
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: auto;
-      gap: 5px;
-      padding: 0 5px;
-      width: 110%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 5px;
+        padding: 0 5px;
+        width: 110%;
     }
-    
-    /* Ajusta os containers dos times para ocupar toda a largura possível */
     .teams {
-      width: 100%;
-      padding: 3px;
-    }
-
-    .sides#right_side > :nth-child(odd) {
-        justify-self: center; /* Alinha à direita */
-    }
-    
-    .sides#right_side > :nth-child(even) {
-        justify-self: center;
-    }
-    
-    /* Reduz levemente o tamanho das imagens e dos textos */
-    .char_img {
-      border-radius: 10px;
-    }
-
-    .text{
-        font-size: 50%;
-        padding-top: 1vh;
+        width: 100%;
+        padding: 3px;
     }
     .main_text {
         font-size: 50%; 
     }
-    .time_text{
+    .time_text {
         position: static;
     }
-  }
-  /* Para telas pequenas até 350px */
-  @media screen and (max-width: 350px) {
-    /* Evita o travamento do fundo em mobile */
-    body {
-      background-attachment: scroll;
-      overflow-x: hidden;
-      overflow-y: visible;
-    }
-    
-    /* Coloca as duas partes (left_side e right_side) em pilha */
-    .select_screen {
-      flex-direction: column;
-    }
-    
+}
+
+@media screen and (max-width: 350px) {
     .sides {
-      width: 70%;
-      height: auto;
-      margin: 5px 0;
+        width: 70%;
     }
-    
-    .sides#left_side {
-      grid-template: repeat(2, auto) / repeat(2, 1fr);
-    }
-    
     .sides#right_side {
-      /* Reorganiza o grid para facilitar a visualização dos personagens */
-      grid-template-columns: repeat(2, 1fr);
-      grid-auto-rows: auto;
-      gap: 5px;
-      padding: 0 5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 5px;
+        padding: 0 5px;
     }
-    
-    /* Ajusta os containers dos times para ocupar toda a largura possível */
-    .teams {
-      width: 100%;
-      padding: 3px;
-    }
-
-    .sides#right_side > :nth-child(odd) {
-        justify-self: center; /* Alinha à direita */
-    }
-    
-    .sides#right_side > :nth-child(even) {
-        justify-self: center;
-    }
-    
-    /* Reduz levemente o tamanho das imagens e dos textos */
-    .char_img {
-      border-radius: 10px;
-    }
-
-    .text{
-        font-size: 50%;
-        padding-top: 1vh;
-    }
-    .main_text {
-        font-size: 50%; 
-    }
-  }
-  
+}
