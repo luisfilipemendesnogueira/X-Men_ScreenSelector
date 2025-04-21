@@ -35,12 +35,16 @@ titleSound.loop = true;
 const keyToDirection = {
     'ArrowUp': 'up',
     'w': 'up',
+    'W': 'up',
     'ArrowDown': 'down',
     's': 'down',
+    'S': 'down',
     'ArrowLeft': 'left',
     'a': 'left',
+    'A': 'left',
     'ArrowRight': 'right',
-    'd': 'right'
+    'd': 'right',
+    'D': 'right'
 };
 
 // Default mapping for navigation between characters
@@ -52,7 +56,11 @@ const defaultKeyMap = {
     'w': -6,
     's': 6,
     'a': -1,
-    'd': 1
+    'd': 1,
+    'W': -6,
+    'S': 6,
+    'A': -1,
+    'D': 1
 };
 // Special mappings for specific characters or teams
 const specialKeyMaps = {
@@ -64,7 +72,11 @@ const specialKeyMaps = {
         'w': 33,
         's': 6,
         'a': 38,
-        'd': 1
+        'd': 1,
+        'W': 33,
+        'S': 6,
+        'A': 38,
+        'D': 1
     },
     'hope_summers': {
         'ArrowUp': -6,
@@ -74,7 +86,11 @@ const specialKeyMaps = {
         'w': -6,
         's': -33,
         'a': -1,
-        'd': -38
+        'd': -38,
+        'W': -6,
+        'S': -33,
+        'A': -1,
+        'D': -38
     },
     'team_1': {
         'ArrowUp': 33,
@@ -84,7 +100,11 @@ const specialKeyMaps = {
         'w': 33,
         's': 6,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': 33,
+        'S': 6,
+        'A': -1,
+        'D': 1
     },
     'team_2': {
         'ArrowUp': 33,
@@ -94,7 +114,11 @@ const specialKeyMaps = {
         'w': 33,
         's': 6,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': 33,
+        'S': 6,
+        'A': -1,
+        'D': 1
     },
     'team_5': {
         'ArrowUp': -6,
@@ -104,7 +128,11 @@ const specialKeyMaps = {
         'w': -6,
         's': 9,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': -6,
+        'S': 9,
+        'A': -1,
+        'D': 1
     },
     'team_6': {
         'ArrowUp': -6,
@@ -114,7 +142,11 @@ const specialKeyMaps = {
         'w': -6,
         's': 3,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': -6,
+        'S': 3,
+        'A': -1,
+        'D': 1
     },
     'special_team': {
         'ArrowUp': -3,
@@ -124,7 +156,11 @@ const specialKeyMaps = {
         'w': -3,
         's': 6,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': -3,
+        'S': 6,
+        'A': -1,
+        'D': 1
     },
     'team_7': {
         'ArrowUp': -9, 
@@ -134,7 +170,11 @@ const specialKeyMaps = {
         'w': -9,
         's': 6,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': -9,
+        'S': 6,
+        'A': -1,
+        'D': 1
     },
     'team_11': {
         'ArrowUp': -6,
@@ -144,7 +184,11 @@ const specialKeyMaps = {
         'w': -6,
         's': -33,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': -6,
+        'S': -33,
+        'A': -1,
+        'D': 1
     },
     'team_12': {
         'ArrowUp': -6,
@@ -154,7 +198,11 @@ const specialKeyMaps = {
         'w': -6,
         's': -33,
         'a': -1,
-        'd': 1
+        'd': 1,
+        'W': -6,
+        'S': -33,
+        'A': -1,
+        'D': 1
     }
 };
 
