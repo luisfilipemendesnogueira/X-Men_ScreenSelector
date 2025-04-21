@@ -4,14 +4,15 @@ X-Men characters in the screen selector of KOF 2002.
 ## 🎮 Link
 https://luisfilipemendesnogueira.github.io/X-Men_ScreenSelector/
 
-## ⚠️ Secret Characters
-### • **Archangel**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
-### • **Colossus Dark Phoenix**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
-### • **Cyclops Dark Phoenix**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
-### • **Emma Frost Dark Phoenix**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
-### • **Emma Frost Diamond Form**: ⬆️ ⬇️ ⬅️ ➡️ ⬇️ ⬆️ ➡️ ⬅️
-### • **Jean Grey Dark Phoenix**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
-### • **Jean Grey White Phoenix**: ⬆️ ⬇️ ⬅️ ➡️ ⬇️ ⬆️ ➡️ ⬅️
-### • **Magik Dark Phoenix**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
+## ⚠️ Secret Characters (Only PC)
+### • **Archangel (Angel)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
+### • **Colossus Dark Phoenix (Colossus)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
+### • **Cyclops Dark Phoenix (Cyclops)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
+### • **Emma Frost Dark Phoenix (Emma Frost)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
+### • **Emma Frost Diamond Form (Emma Frost)**: ⬆️ ⬇️ ⬅️ ➡️ ⬇️ ⬆️ ➡️ ⬅️
+### • **Five Phoenix (Brotherhood)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
+### • **Jean Grey Dark Phoenix (Jean Grey)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
+### • **Jean Grey White Phoenix (Jean Grey)**: ⬆️ ⬇️ ⬅️ ➡️ ⬇️ ⬆️ ➡️ ⬅️
+### • **Magik Dark Phoenix (Magik)**: ⬆️ ⬇️ ➡️ ⬅️ ⬇️ ⬆️ ⬅️ ➡️
 
 
